@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clean Design UK – Web Design & Digital Marketing</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Lato for headings / nav / buttons -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" 
+    rel="stylesheet"
+  />
+  <!-- Inter for body text -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet"
+  />
+
+  <!-- BOOTSTRAP CSS (grid + utilities only) -->
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha512-4m5uXU+W7mIIicPI5LkXdkqkpo/iy8z0nf8bL9pBv8W7HaRbgD4aLNm9u4zon0QPQ9Wl1vdYJHGL7PoKQ7ZV9A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- ===========================
+       NAVBAR
+       =========================== -->
+  <nav class="navbar">
+    <div class="container d-flex align-items-center justify-center-gap">
+      <a class="navbar-brand" href="#">Clean Design UK</a>
+      <ul class="navbar-nav desktop-nav">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#all-pages">All Pages</a></li>
+      </ul>
+      <a href="#cta" class="btn contact-btn desktop-contact">Contact Us</a>
+      <div class="hamburger mobile-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO SECTION (with Loved-By inside, no gradient)
+       =========================== -->
+  <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center">
+    <!-- 1. FULL IMAGE AS <img> (positioned absolutely behind all content) -->
+    <img 
+      src="hero-bg-2.jpg" 
+      alt="Hero Full Background" 
+      class="hero-bg-img"
+    />
+
+    <!-- 2. HERO CONTENT -->
+    <div class="container hero-content fade-in">
+         <!-- BADGE: Proudly Welsh (icon + text) -->
+      <div class="hero-badge mb-4">
+        <img src="wales-flag-1.png" alt="Wales Flag" class="badge-icon">
+        <span class="badge-text">Proudly Welsh</span>
+      </div>
+      
+      <!-- 3. HERO HEADING (brighter red) -->
+      <h1 class="hero-title mb-3">We Build Stunning Websites</h1>
+
+      <!-- 4. HERO SUBTITLE -->
+      <p class="hero-subtitle mb-4">
+        Free consultation + one month’s hosting. Let’s grow your business online.
+      </p>
+
+
+<!-- 5. EMAIL + BUTTON (pill-shaped, gradient button) -->
+<form class="hero-form mx-auto mb-4">
+  <input
+    type="email"
+    class="hero-input"
+    placeholder="Enter your email..."
+    required
+  />
+  <button type="submit" class="hero-btn">Get Notified</button>
+</form>
+
+
+      <!-- 6. HERO FEATURES (✓ icons now bright pinkish-red) -->
+      <div class="hero-features mb-5">
+        <span>Free Consultation</span>
+        <span>Free 1 Month Hosting</span>
+      </div>
+
+      <!-- 7. LOVED-BY ROW (inside hero) -->
+      <div class="loved-by d-flex align-items-center justify-content-center">
+        <!-- Avatars -->
+        <div class="avatars d-flex">
+          <img src="matt-ward-ppm-logo-white.jpg" alt="Customer 1" class="avatar">
+          <img src="rona-rose-favicon.png" alt="Customer 2" class="avatar">
+          <img src="saac_logo.jpg" alt="Customer 3" class="avatar">
+          <img src="nwt-logo.png" alt="Customer 4" class="avatar">
+        </div>
+        <!-- Stars + Text -->
+        <div class="loved-text ms-3">
+          <span class="stars">★★★★★</span>
+          <span class="text">Loved by 50+ Small Businesses</span>
+        </div>
+      </div>
+  </div>
+    </div>
+  </section>
+
+<!-- ===========================
+     ABOUT US (FIXED TWO‐COLUMN)
+=========================== -->
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- LEFT COLUMN: Badge, Heading, Text, Checklist, Button -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <!-- 1) Small red‐gradient badge -->
+        <div class="about-badge mb-3">
+          <!-- White star icon inside a red pill -->
+          <svg
+            class="about-badge-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="#ffffff"
+          >
+            <path
+              d="M12 .587l3.668 7.568L24 9.75l-6 5.847L19.335 24 12 19.897 4.665 24 6 15.597 0 9.75l8.332-1.595z"
+            />
+          </svg>
+          <span class="about-badge-text">Clean Design UK</span>
+        </div>
+
+        <!-- 2) Heading -->
+        <h2 class="about-title mb-4">About Clean Design UK</h2>
+
+        <!-- 3) Paragraph -->
+        <p class="about-text mb-4">
+          Clean Design UK is a Community Interest Company specializing in web design and digital
+          marketing. Based in Wales and serving clients worldwide, we build clean, high‐performing
+          websites and deliver data‐driven marketing strategies that help small businesses grow
+          online. Our ethos is rooted in transparency, creativity, and community—so every project
+          we take on gives back.
+        </p>
+
+        <!-- 4) Checklist of Core Services -->
+        <ul class="about-list mb-4">
+          <li class="about-list-item">
+            <svg
+              class="about-check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="#E60000"
+            >
+              <path d="M20.285 2.997L9 17.365l-5.285-5.15-3.415 3.33L9 24 24 3.297z" />
+            </svg>
+            <span>Custom Website Design (WordPress, Shopify, Webflow)</span>
+          </li>
+          <li class="about-list-item">
+            <svg
+              class="about-check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="#E60000"
+            >
+              <path d="M20.285 2.997L9 17.365l-5.285-5.15-3.415 3.33L9 24 24 3.297z" />
+            </svg>
+            <span>SEO &amp; Performance Optimization</span>
+          </li>
+          <li class="about-list-item">
+            <svg
+              class="about-check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="#E60000"
+            >
+              <path d="M20.285 2.997L9 17.365l-5.285-5.15-3.415 3.33L9 24 24 3.297z" />
+            </svg>
+            <span>Mobile‐Friendly &amp; Responsive Layouts</span>
+          </li>
+          <li class="about-list-item">
+            <svg
+              class="about-check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="#E60000"
+            >
+              <path d="M20.285 2.997L9 17.365l-5.285-5.15-3.415 3.33L9 24 24 3.297z" />
+            </svg>
+            <span>Social Media &amp; Paid Advertising</span>
+          </li>
+        </ul>
+
+        <!-- 5) Call‐to‐Action Button -->
+        <a href="#contact" class="btn discover-btn">Get in Touch</a>
+      </div>
+
+      <!-- RIGHT COLUMN: Just a centered static image -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img
+          src="about-image.png"
+          alt="About Clean Design UK"
+          class="about-image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ADDITIONAL CONTENT (light grey background) -->
+  <section id="other-content" class="py-5">
+    <div class="container">
+      <h2 class="mb-3">More Content Here</h2>
+      <p>This area and anything that follows will have a clean light-grey background.</p>
+    </div>
+  </section>
+
+  <!-- BOOTSTRAP JS BUNDLE (no collapse functionality used) -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+    integrity="sha512-VmVnsdDAUZhuWdA/VLuXNbpu6eVHTC6p2P10tQqn8XQx93TZk98uvJjE1k5W3BZ9WnSB26nLRURb6laSdfEl5w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</body>
+</html>
