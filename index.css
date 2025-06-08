@@ -15,7 +15,7 @@ html {
 
 body {
   /* 1. EVERYTHING AFTER THE HERO USES A LIGHT GREY BACKGROUND */
-  background-color: rgba(0, 0, 0, 0.4);   /* slightly dark transparent */
+  background-color: #090101;   /* slightly dark transparent */
   color: #000;                    /* default text black on grey */
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -41,7 +41,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent;   /* let hero image show behind */
+  background: rgba(82,14,10);   /* let hero image show behind */
   padding: 1rem 0;
   z-index: 999;
 }
@@ -88,6 +88,8 @@ body {
 .desktop-nav .nav-link:focus {
   color: var(--contact-btn-red) !important;
 }
+
+
 
 /* CONTACT US BUTTON (navbar) */
 .contact-btn.desktop-contact {
@@ -432,28 +434,40 @@ body {
   }
 }
 
-/* ========================================
-   ABOUT SECTION — BRAND PALLETTE STYLES
-   ======================================== */
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
 
-/* 1) SECTION BACKGROUND & PADDING */
-.about-section {
-  background-color: #0B0B1D; /* deep near-black */
+/* 1) SECTION STYLES */
+#about.about-section {
   color: #FFFFFF;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-    padding-left: 1.5rem;   /* ≈24px on left */
-  padding-right: 1.5rem;  /* ≈24px on right */
+  padding: 6rem 0;
 }
 
-/* 2) BADGE (RED GRADIENT PILL) */
+/* 2) CENTERED CONTAINER */
+#about .container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 3) TWO-COLUMN GUTTERS */
+#about .row {
+  --bs-gutter-x: 3rem;  /* horizontal gap */
+  --bs-gutter-y: 2rem;  /* vertical gap when stacked */
+  align-items: center;
+}
+
+/* 4) BADGE */
 .about-badge {
   display: inline-flex;
   align-items: center;
   background: linear-gradient(90deg, #E60000 0%, #FF4D4D 100%);
-  /* red gradient */
   border-radius: 50px;
   padding: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
 }
 .about-badge-icon {
   margin-right: 0.5rem;
@@ -465,7 +479,7 @@ body {
   color: #FFFFFF;
 }
 
-/* 3) HEADING (Lato) */
+/* 5) TITLE & BODY */
 .about-title {
   font-family: 'Lato', sans-serif;
   font-size: 2.5rem;
@@ -473,22 +487,19 @@ body {
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
-
-/* 4) PARAGRAPH (Inter) */
 .about-text {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 500px;
+  color: rgba(255,255,255,0.85);
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.85);
 }
 
-/* 5) CHECKLIST ITEMS */
+/* 6) CHECKLIST */
 .about-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
 }
 .about-list-item {
   display: flex;
@@ -496,19 +507,18 @@ body {
   margin-bottom: 1rem;
 }
 .about-check-icon {
-  margin-right: 0.75rem;
   flex-shrink: 0;
+  margin-right: 0.75rem;
 }
 .about-list-item span {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.90);
+  color: rgba(255,255,255,0.90);
 }
 
-/* 6) CTA BUTTON (Discover / Get in Touch) */
+/* 7) CTA BUTTON */
 .discover-btn {
   background: linear-gradient(90deg, #E60000 0%, #FF4D4D 100%);
-  /* red gradient as badge */
   color: #FFFFFF;
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
@@ -522,45 +532,894 @@ body {
 }
 .discover-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230,0,0,0.4);
+}
+
+/* ==========================================================================
+   DESKTOP: FORCE TWO-COLUMN & PLAIN IMAGE
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* lock columns side-by-side */
+  #about .row {
+    display: flex !important;
+    flex-wrap: nowrap;
+  }
+
+  /* each col = 50% */
+  #about .row > .col-lg-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* remove extra bottom margin on first column */
+  #about .row > .col-lg-6.mb-5.mb-lg-0 {
+    margin-bottom: 0 !important;
+  }
+
+  /* second column: no background, just center the image */
+  #about .row > .col-lg-6:nth-child(2) {
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* square, cropped image */
+  #about .row > .col-lg-6:nth-child(2) .about-image {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}
+
+/* ==========================================================================
+   TABLET & MOBILE STACKING
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  #about .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  #about .row {
+    --bs-gutter-y: 2rem;
+  }
+  #about .row > .col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #about .col-lg-6:first-child {
+    padding-right: 3rem;
+  }
+}
+
+/* ==========================================================================
+   SERVICES SECTION — CARDS WITH BRAND COLORS
+   ========================================================================== */
+
+/* Section wrapper */
+#services.services-section {
+  background-color: #000000;  /* solid black page background */
+  color: #FFFFFF;
+  padding: 6rem 0;
+}
+
+/* Center & cap width */
+#services .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Badge (“Services”) */
+#services .features-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  background: linear-gradient(90deg, #E60000 0%, #FF4D4D 100%);
+  color: #FFFFFF;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+}
+#services .features-badge i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Title & subtitle */
+.services-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.services-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.5rem;
+}
+
+/* Grid gutters */
+#services .row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
+}
+
+/* Individual service card */
+.service-card {
+  background-color: #373737;    /* subtle dark card */
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(230, 0, 0, 0.4);
 }
 
-/* 7) RIGHT COLUMN IMAGE STYLES */
-.about-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+/* Icon */
+.service-icon {
+  font-size: 2rem;
+  color: #E60000;   /* brand red */
+  margin-bottom: 1rem;
 }
 
-/* 8) RESPONSIVE: under 992px, center‐align text & stack image below */
+/* Service name */
+.service-name {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #FFFFFF;
+}
+
+/* Description */
+.service-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* Mobile tweak */
+@media (max-width: 767.98px) {
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ================================
+   SERVICES SECTION (FIXED CSS)
+   ================================ */
+
+#services.services-section {
+  background-color: #000;
+  color: #fff;
+  padding: 6rem 0;
+}
+
+#services .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Badge */
+#services .features-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(90deg, #E60000 0%, #FF4D4D 100%);
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+#services .features-badge i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Title & subtitle */
+.services-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.services-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 3rem;
+}
+
+/* Responsive grid for cards */
+#services .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#services .col-lg-4 {
+  flex: 0 0 32%;
+  max-width: 32%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Stacking for mobile/tablet */
 @media (max-width: 991.98px) {
-  .about-title {
-    font-size: 2rem;
-    text-align: center;
+  #services .row {
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
-  .about-text,
-  .about-list {
-    text-align: center;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .discover-btn {
-    display: block;
-    margin: 1.5rem auto 0 auto;
-  }
-  .about-image {
-    margin-top: 3rem;
+  #services .col-lg-4 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    min-width: 220px;
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width: 767.98px) {
-  .about-image {
-    max-width: 100%;
-    height: auto;
-    padding-left: 0.75rem;  /* ≈12px on left */
-    padding-right: 0.75rem; /* ≈12px on right */
+  #services .row {
+    flex-direction: column;
+    gap: 1rem;
   }
+  #services .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Card styling */
+#services .service-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 420px;
+  min-height: 320px;
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.16);
+  background: #373737;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: stretch;
+}
+#services .service-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(230,0,0,0.19);
+}
+
+/* Card background image */
+#services .service-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay/content */
+#services .service-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);  /* <-- same as your original overlay */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5rem 1.25rem 2.5rem 1.25rem;  /* more padding top/bottom */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+
+#services .service-card:hover .service-content {
+  background: rgba(0,0,0,0.58);  /* Slightly more overlay on hover */
+}
+
+/* Icon styling */
+#services .service-icon {
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Title */
+#services .service-name {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Description */
+#services .service-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 90%;
+  line-height: 1.55;
+  margin: 0 auto 0;
+  word-break: break-word;
+  white-space: normal;
+  flex-shrink: 0;
+}
+/* CTA button after the services cards */
+.cta-services-btn {
+  background: linear-gradient(90deg, #E60000 0%, #FF4D4D 100%);
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.85rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(230, 0, 0, 0.24);
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  display: inline-block;
+  margin-top: 4rem;
+  letter-spacing: 0.01em;
+}
+.cta-services-btn:hover, .cta-services-btn:focus {
+  background: linear-gradient(90deg, #c90000 0%, #ff1a1a 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(230, 0, 0, 0.36);
+  text-decoration: none;
+}
+
+/* ==========================================
+   GALLERY  SECTION  –  ARROWS + CENTRED CTA
+   ========================================== */
+.gallery-section{
+  background:#090101;
+  color:#fff;
+  padding:6rem 0 5rem 0;
+}
+
+/* ----- heading ----- */
+.gallery-header{
+  max-width:640px;
+  margin:0 auto 2.4rem auto;
+  text-align:center;
+}
+.gallery-title{
+  font-family:'Lato',sans-serif;
+  font-size:2.2rem;
+  font-weight:700;
+  margin:0 0 .55rem 0;
+}
+.gallery-subtitle{
+  font-family:'Inter',sans-serif;
+  font-size:1.05rem;
+  color:rgba(255,255,255,.72);
+  margin-bottom:1.65rem;
+}
+
+/* ----- Swiper ----- */
+.gallery-swiper{
+  width:100%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+  box-sizing:border-box;
+}
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:transparent;
+}
+.gallery-img{
+  width:100%;
+  max-width:310px;
+  height:200px;
+  object-fit:cover;
+  border-radius:14px;
+  background:transparent;
+  box-shadow:0 4px 16px rgba(0,0,0,.1);
+  margin:0 12px;
+  transition:transform .23s,box-shadow .23s;
+}
+.gallery-img:hover{
+  transform:scale(1.045);
+  box-shadow:0 8px 28px rgba(230,0,0,.18);
+}
+
+/* ----- smaller chevrons (white) ----- */
+.swiper-button-next,
+.swiper-button-prev{
+  color:#fff !important;
+  background:none !important;
+  width:32px;
+  height:32px;
+  top:50%;
+  transform:translateY(-50%);
+  padding:0;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  font-size:1.4rem;   /* smaller arrow glyph */
+  font-weight:700;
+}
+.swiper-button-prev{left:6px;}
+.swiper-button-next{right:6px;}
+
+/* ----- dots lower ----- */
+.swiper-pagination{bottom:-26px !important;}
+.swiper-pagination-bullet{
+  background:#fff;
+  opacity:.45;
+  margin:0 4px;
+}
+.swiper-pagination-bullet-active{
+  background:#E60000;
+  opacity:1;
+}
+
+/* ----- centred CTA button ----- */
+.cta-wrapper{
+  margin-top:3rem;
+  display:flex;
+  justify-content:center;   /* centre horizontally */
+}
+.cta-gallery-btn{
+  background:linear-gradient(90deg,#E60000 0%,#FF4D4D 100%);
+  color:#fff;
+  font-family:'Lato',sans-serif;
+  font-size:1.05rem;
+  font-weight:700;
+  padding:.85rem 2.4rem;
+  border:none;
+  border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 4px 14px rgba(230,0,0,.18);
+  transition:background .18s,transform .14s,box-shadow .18s;
+}
+.cta-gallery-btn:hover,
+.cta-gallery-btn:focus{
+  background:linear-gradient(90deg,#c90000 0%,#ff1a1a 100%);
+  transform:translateY(-2px) scale(1.035);
+  box-shadow:0 8px 22px rgba(230,0,0,.24);
+}
+
+/* ----- responsive tweaks ----- */
+@media(max-width:991.98px){
+  .gallery-img{height:150px;max-width:200px;}
+  .gallery-swiper{max-width:94vw;padding:0 4vw;}
+}
+@media(max-width:600px){
+  .gallery-img{height:95px;max-width:94vw;margin:0 4px;}
+  .gallery-swiper{padding:0 3vw;}
+  .gallery-section{padding:3.5rem 0 2.6rem 0;}
+  .swiper-pagination{bottom:-22px !important;}
+}
+/* ---------- centre the CTA properly ---------- */
+.cta-wrapper{
+  width:100%;                 /* make wrapper span full row */
+  display:flex;               /* flexbox */
+  justify-content:center;     /* centre its single child  */
+  margin-top:3rem;            /* same gap above button    */
+}
+
+/* ---------- button itself (unchanged except auto margins for safety) ---------- */
+.cta-gallery-btn{
+  margin:0 auto;              /* fallback centring in case wrapper rule is lost */
+}
+
+/* ---------- make arrows a touch smaller ---------- */
+.swiper-button-next,
+.swiper-button-prev{
+  width:26px;                 /* was 32 */
+  height:26px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  font-size:1.15rem;          /* was 1.4 */
+}
+
+/* ==========================================================
+   CLEAN DESIGN UK • SPLIT-PANEL CTA  (image always fills)
+   ========================================================== */
+.cduk-cta{
+  display:flex;
+  flex-wrap:wrap;
+  margin:4rem auto;
+  max-width:900px;
+  background:#fff;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 8px 26px rgba(0,0,0,.08);
+}
+
+/* -------- LEFT  : image (fills full height) -------- */
+.cduk-cta__image{
+  flex:1 1 44%;
+  min-width:300px;
+  position:relative;             /* for absolute img  */
+}
+.cduk-cta__image img{
+  position:absolute;
+  inset:0;                       /* top:0 right:0 bottom:0 left:0 */
+  width:100%;
+  height:100%;
+  object-fit:cover;              /* cover no gap       */
+}
+
+/* -------- RIGHT : content -------- */
+.cduk-cta__content{
+  flex:1 1 56%;
+  min-width:300px;
+  padding:3.2rem 2.4rem;
+  background:#373737;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.cduk-kicker{
+  font:600 .75rem/1 'Inter',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  opacity:.85;
+  margin-bottom:.6rem;
+}
+.cduk-title{
+  font:700 1.8rem/1.25 'Lato',sans-serif;
+  margin:0 0 1rem;
+}
+.cduk-text{
+  font:400 1rem/1.55 'Inter',sans-serif;
+  margin:0 0 2rem;
+  max-width:40ch;
+}
+
+/* -------- CTA button : solid red, black glow -------- */
+.cduk-cta__btn{
+  align-self:flex-start;
+  background:#E60000;
+  color:#fff;
+  font:700 .98rem 'Lato',sans-serif;
+  padding:.85rem 2.3rem;
+  border:none;
+  border-radius:50px;
+  text-decoration:none;
+  display:inline-block;
+  box-shadow:0 7px 20px rgba(0,0,0,.55);
+  transition:transform .14s,box-shadow .18s;
+}
+.cduk-cta__btn:hover,
+.cduk-cta__btn:focus{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 11px 28px rgba(0,0,0,.75);
+  color:#fff;
+}
+
+/* ---------- responsive tweaks ---------- */
+@media(max-width:991.98px){
+  .cduk-title{font-size:1.6rem;}
+  .cduk-cta__content{padding:2.7rem 2rem;}
+}
+@media(max-width:575.98px){
+  .cduk-cta{margin:3rem 1rem;}
+  .cduk-title{font-size:1.45rem;}
+  .cduk-text{font-size:.93rem;}
+  .cduk-cta__btn{padding:.75rem 2rem;}
+}
+
+/* =========================================================
+   TESTIMONIAL CAROUSEL-STYLE GRID
+========================================================= */
+.cduk-testimonials{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.4rem;
+  background:#0F0F0F;             /* page backdrop */
+  padding:4rem 1rem;
+  overflow-x:auto;
+}
+
+/* --- common card box --- */
+.t-box{
+  background:#161616;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:8px;
+  padding:2rem 1.8rem;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:300px;
+}
+
+/* -------------------------------- Summary (left card) */
+.t-summary{
+  background:#ffffff;
+  color:#161616;
+  grid-row:span 2;
+  min-width:240px;
+}
+
+.t-summary__brand{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font:600 1.05rem 'Lato',sans-serif;
+  margin-bottom:1.6rem;
+}
+.t-summary__brand img{
+  width:26px;
+  height:26px;
+}
+
+.t-summary__heading{
+  font:700 1.55rem/1.3 'Lato',sans-serif;
+  margin:0 0 2rem;
+}
+
+.t-summary__rating .big{
+  font:700 3.2rem 'Lato',sans-serif;
+}
+.t-summary__rating .small{
+  font-size:1.6rem;
+}
+.stars{
+  font-size:1rem;
+  letter-spacing:.08em;
+  margin-top:.4rem;
+  color:#E6B400;
+}
+
+/* --- “More Reviews” button */
+.t-summary__btn{
+  margin-top:2rem;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:#E60000;
+  color:#fff;
+  font:600 .95rem 'Lato',sans-serif;
+  padding:.85rem 1.6rem;
+  border-radius:40px;
+  text-decoration:none;
+  transition:transform .15s,box-shadow .2s;
+  box-shadow:0 6px 18px rgba(230,0,0,.4);
+}
+.t-summary__btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(230,0,0,.55);
+}
+.t-summary__btn .arrow{font-size:1.2rem;line-height:1;}
+
+/* -------------------------------- Individual reviews */
+.t-box h4{
+  font:700 1.25rem 'Lato',sans-serif;
+  margin:0 0 .3rem;
+}
+.t-box time{
+  font:.85rem 'Inter',sans-serif;
+  opacity:.7;
+}
+.t-box p{
+  font:.95rem/1.55 'Inter',sans-serif;
+  margin:1.2rem 0 1.6rem;
+  color:rgba(255,255,255,.9);
+}
+.t-box .stars{margin-top:auto;}
+
+/* -------------------------------- Responsive tweaks */
+@media(max-width:768px){
+  .cduk-testimonials{grid-auto-flow:column;overflow-x:auto;}
+  .t-summary{min-width:260px;}
+}
+/* =====================================================
+   CLEAN DESIGN UK  •  FAQ SECTION
+===================================================== */
+.cduk-faq{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.5rem;
+  background:#0F0F0F;                      /* section backdrop */
+  padding:4rem 1rem;
+  max-width:1280px;
+  margin:3rem auto;
+}
+
+.faq__content{
+  background:#161616;                      /* charcoal panel   */
+  border-radius:8px;
+  padding:3rem 2.2rem;
+  color:#fff;
+}
+
+.faq__heading{
+  font:700 2.25rem/1.25 'Lato',sans-serif;
+  margin:0 0 2rem;
+  color:#fff;
+}
+
+/* ------------ accordion ------------ */
+details{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:6px;
+  margin-bottom:1rem;
+  overflow:hidden;
+  background:#161616;
+  transition:border-color .2s;
+}
+details[open]{
+  border-color:#E60000;
+}
+
+summary{
+  list-style:none;
+  cursor:pointer;
+  padding:1rem 1.25rem;
+  font:600 1rem 'Lato',sans-serif;
+  position:relative;
+}
+summary::-webkit-details-marker{display:none;} /* remove default arrow */
+
+/* custom chevron */
+summary::after{
+  content:'▼';
+  position:absolute;
+  right:1.25rem;
+  top:50%;
+  transform:translateY(-50%) rotate(-90deg);
+  font-size:.9rem;
+  transition:transform .25s,color .2s;
+  color:#fff;
+}
+details[open] summary::after{
+  transform:translateY(-50%) rotate(0deg);
+  color:#E60000;
+}
+
+details p{
+  padding:0 1.25rem 1.25rem;
+  font:.95rem/1.6 'Inter',sans-serif;
+  color:rgba(255,255,255,.9);
+}
+
+/* =========================================================
+   FAQ  –  make image column match FAQ height
+   (append after existing FAQ CSS)
+========================================================= */
+
+/* desktop / tablet  ≥ 992 px */
+@media (min-width: 992px){
+  /* same two-column grid, but let the picture flex-stretch */
+  .cduk-faq{
+    align-items:stretch;               /* both columns equal height  */
+    grid-template-columns: 1fr 400px;  /* adjust width of image col  */
+  }
+
+  .faq__image{
+    display:flex;                      /* stretch child img          */
+    border-radius:8px;                 /* same rounding as FAQ card  */
+    overflow:hidden;
+  }
+
+  .faq__image img{
+    width:100%;
+    height:100%;                       /* full column height         */
+    object-fit:cover;                  /* fill without distortion    */
+  }
+}
+
+/* phones & small tablets  < 992 px  – stays stacked */
+
+/* =========================================================
+   FOOTER  •  Clean Design UK  (black theme)
+========================================================= */
+.cduk-footer{
+  background:#000;
+  color:#cfcfcf;
+  font-family:'Inter',sans-serif;
+  padding:4rem 1rem 3rem;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2.5rem;
+}
+
+.f-col h4{
+  font:600 1.05rem 'Lato',sans-serif;
+  color:#fff;
+  margin:0 0 1rem;
+}
+
+.f-col ul{
+  list-style:none;
+  margin:0;padding:0;
+}
+.f-col li+li{margin-top:.5rem;}
+
+.f-col a{
+  color:#cfcfcf;
+  font-size:.95rem;
+  text-decoration:none;
+  transition:color .2s;
+}
+.f-col a:hover{color:#E60000;}
+
+/* --- brand block --- */
+.brand-row{
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+  margin-bottom:1.2rem;
+}
+.logo{
+  width:28px;height:28px;
+}
+.brand-name{
+  font:600 1.1rem 'Lato',sans-serif;
+  color:#fff;
+}
+.brand p{
+  font:.95rem/1.6 'Inter',sans-serif;
+  max-width:40ch;
+}
+
+/* --- social icons --- */
+.social a{
+  font-size:1.3rem;
+  margin-right:1rem;
+  color:#cfcfcf;
+  transition:color .2s,transform .15s;
+}
+.social a:hover{
+  color:#E60000;
+  transform:translateY(-2px);
+}
+
+/* --- bottom bar --- */
+.footer-bottom{
+  text-align:center;
+  margin-top:2.7rem;
+  font-size:.85rem;
+  color:#777;
+}
+
+/* --- mobile tweaks --- */
+@media(max-width:600px){
+  .footer-inner{gap:1.8rem;}
+  .cduk-footer{padding:3rem 1rem 2rem;}
 }
