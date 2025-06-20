@@ -27,7 +27,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="https://via.placeholder.com/32" alt="Logo" class="me-2">
+        <img src="cduk-logo-80.png" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -70,10 +70,27 @@
     </p>
 
     <!-- Form pill with top & bottom margin -->
-    <form class="hero-form">
-      <input type="email" class="hero-input" placeholder="Enter your email…" required>
-      <button class="hero-btn" type="submit">Get Notified</button>
+    <form id="hero-form"
+          class="hero-form"
+          action="https://api.web3forms.com/submit"
+          method="POST">
+      <!-- Web3Form required fields -->
+      <input type="hidden" name="access_key" value="64b77c31-f500-4317-87f1-feb766e00ea7" />
+      <input type="hidden" name="subject"    value="New signup from homepage" />
+
+      <!-- Honeypot -->
+      <div style="display:none;">
+        <label>Leave this empty<input type="text" name="botcheck" /></label>
+      </div>
+
+      <input type="email" name="email"
+             class="hero-input"
+             placeholder="Enter your email…"
+             required />
+
+      <button type="submit" class="hero-btn">Get Notified</button>
     </form>
+
 
     <!-- Feature ticks with vertical margin -->
     <div class="hero-features d-flex justify-content-center gap-4 pt-3">
@@ -99,196 +116,549 @@
 </section>
 
 
-  <!-- SERVICES -->
-  <section id="services" class="py-5">
-    <div class="container text-center">
-      <span class="badge section-badge"><i class="bi bi-stars me-1"></i>Services</span>
-      <h2 class="fw-bold mb-2">Our Services</h2>
-      <p class="text-muted mb-4">We offer tailored solutions to grow your online presence and drive real results.</p>
+<section id="services" class="py-5">
+  <div class="container text-center">
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card service-card text-white">
-            <div class="card-body">
-              <i class="bi bi-laptop service-icon mb-3"></i>
-              <h5 class="card-title">Website Design</h5>
-              <p class="card-text">We create engaging, user-friendly websites tailored to your brand.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card service-card text-white">
-            <div class="card-body">
-              <i class="bi bi-bar-chart-line service-icon mb-3"></i>
-              <h5 class="card-title">Digital Marketing</h5>
-              <p class="card-text">We drive growth with strategic social-media and SEO campaigns.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card service-card text-white">
-            <div class="card-body">
-              <i class="bi bi-megaphone service-icon mb-3"></i>
-              <h5 class="card-title">Paid Ads</h5>
-              <p class="card-text">We optimise ad campaigns for maximum ROI across platforms.</p>
-            </div>
-          </div>
+    <!-- 1) LARGER SERVICES BADGE -->
+    <span class="badge services-badge mb-3">
+      <i class="bi bi-stars me-1"></i>
+      Services
+    </span>
+
+    <h2 class="services-title mb-2">Our Services</h2>
+    <p class="services-subtitle mb-4">
+      We offer tailored solutions to grow your online presence and drive real results.
+    </p>
+
+    <!-- 2) SERVICE CARDS (3 columns) -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card text-white">
+          <i class="bi bi-laptop service-icon mb-3"></i>
+          <h5 class="service-name mb-2">Website Design</h5>
+          <p class="service-desc">
+            We create engaging, user-friendly websites tailored to your brand.
+          </p>
         </div>
       </div>
-
-      <a href="#pricing" class="btn btn-danger px-4 mt-4">View All Services & Pricing</a>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="py-5">
-    <div class="container text-center">
-      <span class="badge section-badge"><i class="bi bi-images me-1"></i>Gallery</span>
-      <h2 class="fw-bold mb-2">Website Portfolio</h2>
-      <p class="text-muted mb-4">See some of the stunning websites we've designed for our clients.</p>
-
-      <div id="galleryCarousel" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img src="https://via.placeholder.com/1000x500" class="d-block w-100" alt=""></div>
-          <div class="carousel-item"><img src="https://via.placeholder.com/1000x500" class="d-block w-100" alt=""></div>
-          <div class="carousel-item"><img src="https://via.placeholder.com/1000x500" class="d-block w-100" alt=""></div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card text-white">
+          <i class="bi bi-bar-chart-line service-icon mb-3"></i>
+          <h5 class="service-name mb-2">Digital Marketing</h5>
+          <p class="service-desc">
+            We drive growth with strategic social-media and SEO campaigns.
+          </p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+      <div class="col-md-6 col-lg-4 mx-auto mx-lg-0">
+        <div class="service-card text-white">
+          <i class="bi bi-megaphone service-icon mb-3"></i>
+          <h5 class="service-name mb-2">Paid Ads</h5>
+          <p class="service-desc">
+            We optimise ad campaigns for maximum ROI across platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3) CTA BUTTON -->
+    <a href="#pricing" class="btn services-cta mt-5">
+      View All Services & Pricing
+    </a>
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section py-5">
+  <div class="container text-center">
+
+    <!-- BIG PILL BADGE -->
+    <span class="badge gallery-badge mb-3">
+      <i class="bi bi-images me-1"></i>
+      Gallery
+    </span>
+
+    <!-- TITLE & SUBTITLE -->
+    <h2 class="gallery-title mb-2">Website Portfolio</h2>
+    <p class="gallery-subtitle mb-4">
+      See some of the stunning websites we've designed for our clients.
+    </p>
+
+    <!-- CAROUSEL -->
+    <div id="galleryCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- SLIDE -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="gallery-frame">
+              <img src="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="SandArtsandCrafts-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="glow-cable-guard-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+          </div>
+        </div>
+                <!-- SLIDE -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="gallery-frame">
+              <img src="cheap website UK-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="northwalestutoring-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="Morris Property Firm-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="gallery-frame">
+              <img src="talkwithsian-web-design-by-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+            <div class="gallery-frame">
+              <img src="hughhelps-professional-web-designer-north-wales-bangor.png" class="gallery-img" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ADD MORE SLIDES HERE -->
       </div>
 
-      <a href="#gallerypage" class="btn btn-danger px-4 mt-4">View Full Gallery</a>
+      <!-- CONTROLS -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <i class="bi bi-chevron-left gallery-arrow"></i>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <i class="bi bi-chevron-right gallery-arrow"></i>
+      </button>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <span class="badge section-badge"><i class="bi bi-star-fill me-1"></i>Clean Design UK</span>
-      <h2 class="fw-bold mb-3">About Clean Design UK</h2>
-      <p class="mb-4">Clean Design UK is a Community Interest Company specialising in web design…</p>
-      <ul class="list-unstyled mb-4">
-        <li class="mb-2"><i class="bi bi-check2-circle text-danger me-2"></i>Custom Website Design (WordPress, Shopify, Webflow)</li>
-        <li class="mb-2"><i class="bi bi-check2-circle text-danger me-2"></i>SEO & Performance Optimisation</li>
-        <li class="mb-2"><i class="bi bi-check2-circle text-danger me-2"></i>Mobile-Friendly & Responsive Layouts</li>
-        <li class="mb-2"><i class="bi bi-check2-circle text-danger me-2"></i>Social Media & Paid Advertising</li>
+    <!-- CTA BUTTON -->
+    <a href="#gallerypage" class="btn services-cta mt-5">
+      View Full Gallery
+    </a>
+  </div>
+</section>
+
+
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- TEXT COLUMN -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <!-- Big pill badge -->
+        <span class="badge services-badge mb-3">
+          <i class="bi bi-star-fill me-1"></i>
+          Clean Design UK
+        </span>
+
+        <!-- Section title -->
+        <h2 class="section-title mb-4">About Clean Design UK</h2>
+
+        <!-- Intro paragraph -->
+        <p class="about-text mb-4">
+          Clean Design UK is a Community Interest Company specialising in web design and digital marketing. 
+          Based in Wales and serving clients worldwide, we build clean, high-performing websites and deliver 
+          data-driven marketing strategies that help small businesses grow online. Our ethos is rooted in 
+          transparency, creativity, and community, so every project we take on gives back.
+        </p>
+
+        <!-- Feature list -->
+        <ul class="about-list mb-4">
+          <li class="about-list-item">
+            <i class="bi bi-check-circle-fill"></i>
+            Custom Website Design (WordPress, Shopify, Webflow)
+          </li>
+          <li class="about-list-item">
+            <i class="bi bi-check-circle-fill"></i>
+            SEO &amp; Performance Optimization
+          </li>
+          <li class="about-list-item">
+            <i class="bi bi-check-circle-fill"></i>
+            Mobile-Friendly &amp; Responsive Layouts
+          </li>
+          <li class="about-list-item">
+            <i class="bi bi-check-circle-fill"></i>
+            Social Media &amp; Paid Advertising
+          </li>
+        </ul>
+
+        <!-- CTA button -->
+        <a href="#contact" class="btn about-cta">Get in Touch</a>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="col-lg-6 text-center">
+        <!-- placeholder image: replace src with your own -->
+        <img src="CDUK logo.png" 
+             alt="About Clean Design UK" 
+             class="about-image img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- TESTIMONIAL -->
+<section id="testimonials" class="cduk-testimonials">
+  <div class="testimonials-inner container-lg">
+    <!-- Badge + Title -->
+    <span class="badge testimonials-badge">
+      <i class="bi bi-star-fill me-1"></i>
+      Clean Design UK
+    </span>
+    <h2 class="testimonials-title">Trusted by 50+ Happy Clients</h2>
+
+    <!-- All six cards: summary + 5 reviews -->
+    <div class="testimonials-cards">
+      <!-- Summary card -->
+      <div class="t-box t-summary">
+        <div class="t-summary__brand">
+          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <span>Clean Design UK</span>
+        </div>
+        <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
+        <div class="t-summary__rating">
+          <span class="big">5<span class="small">/5</span></span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+        </div>
+        <a href="https://g.co/kgs/hPtd1Lf" target="_blank" rel="noopener" class="t-summary__btn">
+          See More Reviews <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="t-box">
+        <h4>Maxine Phillips</h4>
+        <time>May 9, 2025</time>
+        <p>From the initial consultation to the final product, Clean Design UK, especially Jesse, was fantastic. The final website was even better than I envisioned. Highly recommend!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="t-box">
+        <h4>Tina</h4>
+        <time>Apr 20, 2025</time>
+        <p>Jesse has been so patient and understanding. Always in contact, arranging meetings and sending emails to keep us updated. Many thanks for all your hard work.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="t-box">
+        <h4>Nicholas Taylor</h4>
+        <time>Mar 18, 2025</time>
+        <p>Clean Design UK produced a detailed report with clear, actionable steps to improve my site (JustWriteRight.co.uk). Done quickly with great communication.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="t-box">
+        <h4>Nathan Flatt</h4>
+        <time>Feb 27, 2025</time>
+        <p>Jesse gave professional, unique advice on setting up my business. Friendly and easy to talk to — a great guy!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="t-box">
+        <h4>May Berbery-Canvin</h4>
+        <time>Jan 31, 2025</time>
+        <p>Excellent service and creativity. I recommend Clean Design to anyone wanting a neat, professional website and logo.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section py-5 text-center">
+  <div class="container">
+    <span class="faq-badge">
+      <i class="bi bi-question-circle"></i> FAQ
+    </span>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How much does a website cost?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Every project is custom-quoted. Starter websites begin around <strong>£850</strong>, while fully-featured e-commerce builds start at <strong>£2,500</strong>. After a discovery call we’ll send a transparent, fixed-price proposal.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you handle hosting &amp; maintenance?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Yes! We offer managed hosting on UK data centres with daily backups, SSL, performance monitoring, plus optional care plans for updates, security patches, and tweaks.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you improve my existing WordPress site?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Absolutely. From speed optimisations to UX enhancements and full design refreshes, we’ll audit your site and implement high-impact fixes without losing data or rankings.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide copywriting &amp; SEO?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          We do. Our content team researches keywords, writes conversion-focused copy, and implements on-page SEO best practices so your site launches ready to rank.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a typical project take?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          A brochure site typically runs <strong>3–4 weeks</strong>, while larger builds take <strong>6–8 weeks</strong>. We keep you in the loop with weekly progress updates.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA SECTION -->
+<section id="contact" class="cta-section">
+  <div class="container cta-container">
+        <div class="cta-image">
+      <img src="bg-cta.jpg" alt="Creative workspace">
+    </div>
+    <div class="cta-content">
+      <span class="cta-badge">
+        <i class="bi bi-lightning-fill"></i>
+        Let’s Talk Strategy
+      </span>
+      <h2 class="cta-title">
+        Ready to Elevate Your Online Presence?
+      </h2>
+      <p class="cta-subtitle">
+        From lightning-fast websites to data-driven marketing, our Welsh team crafts clean, high-converting digital experiences.  
+        Fill in the form below for a free, no-obligation quote.
+      </p>
+ <form id="cta-form"
+            class="cta-form"
+            action="https://api.web3forms.com/submit"
+            method="POST">
+        <!-- Web3Form hidden fields -->
+        <input type="hidden" name="access_key" value="64b77c31-f500-4317-87f1-feb766e00ea7" />
+        <input type="hidden" name="subject"    value="New quote request" />
+
+        <!-- Honeypot -->
+        <div style="display:none;">
+          <label>Leave this empty<input type="text" name="botcheck" /></label>
+        </div>
+
+        <div class="cta-form-grid">
+          <input type="text" name="name"
+                 placeholder="Your Name" required />
+
+          <input type="email" name="email"
+                 placeholder="Your Email" required />
+
+          <input type="tel" name="phone"
+                 placeholder="Phone Number" required />
+
+          <button type="submit" class="cta-btn">
+            Get My Free Quote
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+    <!-- FOOTER -->
+<footer class="cduk-footer">
+  <div class="footer-inner">
+    <div class="f-col brand">
+      <div class="brand-row">
+        <img src="CDUK logo.png" alt="Clean Design UK">
+        <span class="brand-name">Clean Design UK</span>
+      </div>
+      <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-danger px-4">Get in Touch</a>
     </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <h5 class="card-title"><img src="https://via.placeholder.com/24" class="me-2">Clean Design UK</h5>
-              <p class="display-5">5<small>/5</small></p>
-              <div class="text-warning mb-3">★★★★★</div>
-              <a href="#" target="_blank" class="btn btn-danger">More Reviews ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="card h-100 bg-secondary text-white p-3">
-                <h6>Maxine Phillips</h6><small class="d-block mb-2">May 9 2025</small>
-                <p class="flex-grow-1">…From the initial consultation…</p>
-                <div class="text-warning">★★★★★</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card h-100 bg-secondary text-white p-3">
-                <h6>Tina</h6><small class="d-block mb-2">Apr 20 2025</small>
-                <p class="flex-grow-1">…Always in contact…</p>
-                <div class="text-warning">★★★★★</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="f-col">
+      <h5>Policies</h5>
+      <ul>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-google"></i></a>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Clean Design UK — Web Design & Marketing
+  </div>
+</footer>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-5">
-    <div class="container">
-      <span class="badge section-badge"><i class="bi bi-question-circle me-1"></i>FAQ</span>
-      <h2 class="fw-bold mb-3">Frequently Asked Questions</h2>
-      <p class="text-muted mb-4">Answers to the most common questions about our services.</p>
-
-      <div class="accordion" id="faqAcc">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
-              How much does a website with Clean Design UK cost?
-            </button>
-          </h2>
-          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Every project is custom-quoted…</div>
-          </div>
-        </div>
-        <!-- add more questions -->
-      </div>
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-banner__content">
+    <p>
+      We use cookies to ensure you get the best experience on our site. 
+      <a href="/privacy">Learn more</a>
+    </p>
+    <div class="cookie-banner__actions">
+      <button id="cookie-accept" class="btn-cookie btn-accept">Accept</button>
+      <button id="cookie-decline" class="btn-cookie btn-decline">Decline</button>
     </div>
-  </section>
+  </div>
+  <button id="cookie-close" class="cookie-banner__close">&times;</button>
+</div>
 
-  <!-- CTA -->
-  <section class="py-5 bg-light">
-    <div class="container d-lg-flex align-items-center gap-4">
-      <img src="https://via.placeholder.com/500x500" class="img-fluid rounded mb-4 mb-lg-0" alt="CTA">
-      <div>
-        <small class="text-uppercase text-muted">Contact Clean Design UK</small>
-        <h2 class="fw-bold mb-3">Ready to Elevate Your Online Presence?</h2>
-        <p class="mb-4">From lightning-fast websites to data-driven marketing campaigns…</p>
-        <a href="#contact" class="btn btn-danger px-4">Book My Free Strategy Call →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container py-5 row gy-4">
-      <div class="col-md-4">
-        <h5 class="mb-3"><img src="https://via.placeholder.com/24" class="me-2">Clean Design UK</h5>
-        <p class="small">Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
-      </div>
-      <div class="col-md-2">
-        <h6 class="mb-3">Pages</h6>
-        <ul class="list-unstyled small">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <h6 class="mb-3">Policies</h6>
-        <ul class="list-unstyled small">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="mb-3">Follow Us</h6>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-tiktok"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-google"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center small pb-3 bg-secondary2">© 2025 Clean Design UK — Web Design & Marketing</div>
-  </footer>
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  // FAQ toggle script
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      const icon = btn.querySelector('.faq-icon');
+      icon.classList.toggle('bi-plus-lg', !open);
+      icon.classList.toggle('bi-dash-lg', open);
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll('#cookie-accept, #cookie-decline, #cookie-close')
+    .forEach(btn => btn.addEventListener('click', () => {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }));
+</script>
+
+<!-- include SweetAlert2 once, above your closing </body> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  const BLOCKED_KEYWORDS = [
+    'backlink','google top','we offer backlink','rank','seo fix'
+  ];
+
+  function validateFields(form) {
+    // 1) Honeypot
+    if (form.botcheck?.value) return false;
+
+    // 2) Email
+    const email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      Swal.fire('Oops','Please enter a valid email.','warning');
+      return false;
+    }
+
+    // 3) Phone (only for the quote form)
+    if (form.phone) {
+      const digits = form.phone.value.replace(/\D/g,'');
+      if (
+        digits.length < 7 ||
+        digits.length > 15 ||
+        (/^(\d)\1+$/).test(digits)
+      ) {
+        Swal.fire('Oops','Please enter a valid phone number.','warning');
+        return false;
+      }
+    }
+
+    // 4) Any textarea spam-keywords
+    if (form.message) {
+      const msg = form.message.value.toLowerCase();
+      if (BLOCKED_KEYWORDS.some(k => msg.includes(k))) {
+        Swal.fire('Sorry','Your message contains forbidden content.','error');
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  ['hero-form','cta-form'].forEach(id => {
+    const form = document.getElementById(id);
+    if (!form) return;
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!validateFields(form)) return;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (!response.ok) {
+          // non-2xx HTTP
+          throw new Error(`Network error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data.success) {
+          await Swal.fire({
+            icon: 'success',
+            title: 'Thank you!',
+            text: 'Our team will get back to you soon.',
+            confirmButtonColor: '#ba0d17'
+          });
+          form.reset();
+        } else {
+          // server-returned JSON with success:false
+          Swal.fire('Error', data.message || 'Submission failed.','error');
+        }
+      } catch(err) {
+        console.error(err);
+        Swal.fire('Error', err.message || 'Something went wrong. Please try again.','error');
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>

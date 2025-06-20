@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Clean Design UK</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,200..1000;1,200..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Inter:ital,opsz,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap & Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Contact-page styles -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (logo at 80×80) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="CDUK small logo.webp"
+          alt="Logo"
+          width="80"
+          height="80"
+          class="me-2"
+        />
+        CleanDesignUK
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+      >
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div id="navMenu" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="grid-overlay"></div>
+  <div class="container">
+
+    <div class="row">
+      <!-- LEFT COLUMN: Badge + Heading + Intro + Contact Methods -->
+      <div class="col-lg-6 d-flex flex-column">
+
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">
+          We’re here 24/7 to help with any questions or support you need. Get in touch by phone, WhatsApp, email, or send us a message below.
+        </p>
+
+        <ul class="contact-info">
+          <li>
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+447367292269">+44 7367 292269</a>
+          </li>
+          <li>
+            <i class="bi bi-whatsapp"></i>
+            <a href="https://wa.me/447367292269" target="_blank">Chat on WhatsApp</a>
+          </li>
+          <li>
+            <i class="bi bi-envelope-fill"></i>
+            <p><a href="mailto:cleandesign.uk@gmail.com">cleandesign.uk@gmail.com</a> or <a href="mailto:jesse@cleandesignuk.com">jesse@cleandesignuk.com</a></p>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt-fill"></i>
+            4 Ffordd Cerrig Mawr, Caergelliog LL65 3LU
+          </li>
+          <li>
+            <i class="bi bi-clock-fill"></i>
+            Working Hours: 24/7
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Inquiry Form -->
+      <div class="col-lg-6 d-flex">
+        <div class="contact-card w-100">
+          <h3>General Inquiries</h3>
+     <form id="cduk-contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST">
+
+      <!-- Web3Form required fields (no redirect!) -->
+      <input type="hidden" name="access_key" value="64b77c31-f500-4317-87f1-feb766e00ea7" />
+      <input type="hidden" name="subject"    value="New Inquiry from Website" />
+      <input type="hidden" name="reply_to"   value="email" />
+
+      <!-- Honeypot -->
+      <div style="display:none">
+        <label>Leave this empty: <input type="text" name="botcheck"></label>
+      </div>
+
+      <div class="row gx-3">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Your Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Your Email</label>
+          <input type="email" name="email" class="form-control" placeholder="Email address" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Phone</label>
+          <input type="tel" name="phone" class="form-control"
+                 placeholder="Your Phone Number"
+                 pattern="^\+?[0-9\s]{7,15}$"
+                 title="7–15 digits only"
+                 required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Subject</label>
+          <select name="custom_subject" class="form-select" required>
+            <option value="" disabled selected>Select a subject…</option>
+            <option>Website Design / Redesign</option>
+            <option>Logo Design</option>
+            <option>Business Branding</option>
+            <option>Digital Marketing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-12 mb-3">
+          <label class="form-label">Your Message</label>
+          <textarea name="message" class="form-control" rows="5"
+                    placeholder="Enter your message…" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-danger">Send Message</button>
+        </div>
+      </div>
+    </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SCHEDULE SECTION -->
+  <section id="schedule" class="schedule-section">
+    <div class="container">
+      <span class="section-badge">
+        <i class="bi bi-calendar-event-fill"></i>
+        Schedule
+      </span>
+      <h2 class="section-title">Book Your Free Discovery Call</h2>
+      <p class="section-subtitle">
+        Schedule a complimentary 30-minute one-on-one session so we can dive into your needs and outline how to elevate your digital presence for real business growth.
+      </p>
+      <div class="calendly-wrapper">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jesse-cleandesignuk/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly end -->
+      </div>
+    </div>
+  </section>
+
+      <!-- TESTIMONIAL -->
+<section id="testimonials" class="cduk-testimonials">
+  <div class="testimonials-inner container-lg">
+    <!-- Badge + Title -->
+    <span class="badge testimonials-badge">
+      <i class="bi bi-star-fill me-1"></i>
+      Clean Design UK
+    </span>
+    <h2 class="testimonials-title">Trusted by 50+ Happy Clients</h2>
+
+    <!-- All six cards: summary + 5 reviews -->
+    <div class="testimonials-cards">
+      <!-- Summary card -->
+      <div class="t-box t-summary">
+        <div class="t-summary__brand">
+          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <span>Clean Design UK</span>
+        </div>
+        <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
+        <div class="t-summary__rating">
+          <span class="big">5<span class="small">/5</span></span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+        </div>
+        <a href="https://g.co/kgs/hPtd1Lf" target="_blank" rel="noopener" class="t-summary__btn">
+          See More Reviews <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="t-box">
+        <h4>Maxine Phillips</h4>
+        <time>May 9, 2025</time>
+        <p>From the initial consultation to the final product, Clean Design UK, especially Jesse, was fantastic. The final website was even better than I envisioned. Highly recommend!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="t-box">
+        <h4>Tina</h4>
+        <time>Apr 20, 2025</time>
+        <p>Jesse has been so patient and understanding. Always in contact, arranging meetings and sending emails to keep us updated. Many thanks for all your hard work.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="t-box">
+        <h4>Nicholas Taylor</h4>
+        <time>Mar 18, 2025</time>
+        <p>Clean Design UK produced a detailed report with clear, actionable steps to improve my site (JustWriteRight.co.uk). Done quickly with great communication.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="t-box">
+        <h4>Nathan Flatt</h4>
+        <time>Feb 27, 2025</time>
+        <p>Jesse gave professional, unique advice on setting up my business. Friendly and easy to talk to — a great guy!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="t-box">
+        <h4>May Berbery-Canvin</h4>
+        <time>Jan 31, 2025</time>
+        <p>Excellent service and creativity. I recommend Clean Design to anyone wanting a neat, professional website and logo.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section py-5 text-center">
+  <div class="container">
+    <span class="faq-badge">
+      <i class="bi bi-question-circle"></i> FAQ
+    </span>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How much does a website cost?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Every project is custom-quoted. Starter websites begin around <strong>£850</strong>, while fully-featured e-commerce builds start at <strong>£2,500</strong>. After a discovery call we’ll send a transparent, fixed-price proposal.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you handle hosting &amp; maintenance?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Yes! We offer managed hosting on UK data centres with daily backups, SSL, performance monitoring, plus optional care plans for updates, security patches, and tweaks.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you improve my existing WordPress site?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Absolutely. From speed optimisations to UX enhancements and full design refreshes, we’ll audit your site and implement high-impact fixes without losing data or rankings.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide copywriting &amp; SEO?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          We do. Our content team researches keywords, writes conversion-focused copy, and implements on-page SEO best practices so your site launches ready to rank.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a typical project take?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          A brochure site typically runs <strong>3–4 weeks</strong>, while larger builds take <strong>6–8 weeks</strong>. We keep you in the loop with weekly progress updates.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+<footer class="cduk-footer">
+  <div class="footer-inner">
+    <div class="f-col brand">
+      <div class="brand-row">
+        <img src="CDUK logo.png" alt="Clean Design UK">
+        <span class="brand-name">Clean Design UK</span>
+      </div>
+      <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Policies</h5>
+      <ul>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-google"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Clean Design UK — Web Design & Marketing
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  const BLOCKED_KEYWORDS = [
+    'backlink','google top','we offer backlink','rank','seo fix'
+  ];
+
+  function validateContactForm(form) {
+    // 1) Honeypot
+    if (form.botcheck.value) return false;
+
+    // 2) Name
+    if (!form.name.value.trim()) {
+      Swal.fire('Oops','Please enter your name.','warning');
+      return false;
+    }
+
+    // 3) Email
+    const email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      Swal.fire('Oops','Please enter a valid email address.','warning');
+      return false;
+    }
+
+    // 4) Phone
+    const digits = form.phone.value.replace(/\D/g,'');
+    if (
+      digits.length < 7 ||
+      digits.length > 15 ||
+      (/^(\d)\1+$/).test(digits)
+    ) {
+      Swal.fire('Oops','Please enter a valid phone number.','warning');
+      return false;
+    }
+
+    // 5) Subject
+    if (!form.custom_subject.value) {
+      Swal.fire('Oops','Please select a subject.','warning');
+      return false;
+    }
+
+    // 6) Message
+    const msg = form.message.value.trim();
+    if (!msg) {
+      Swal.fire('Oops','Please enter your message.','warning');
+      return false;
+    }
+    if (BLOCKED_KEYWORDS.some(kw => msg.toLowerCase().includes(kw))) {
+      Swal.fire('Sorry','Your message contains forbidden content.','error');
+      return false;
+    }
+
+    return true;
+  }
+
+  document
+    .getElementById('cduk-contact-form')
+    .addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+
+      if (!validateContactForm(form)) return;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (!res.ok) throw new Error(`Network error: ${res.status}`);
+        const json = await res.json();
+
+        if (json.success) {
+          await Swal.fire({
+            icon: 'success',
+            title: 'Thank you!',
+            text: 'Our team will get back to you soon.',
+            confirmButtonColor: '#ba0d17'
+          });
+          form.reset();
+        } else {
+          Swal.fire('Error', json.message || 'Submission failed.','error');
+        }
+      } catch (err) {
+        console.error(err);
+        Swal.fire('Error','Something went wrong. Please try again later.','error');
+      }
+    });
+</script>
+
+
+
+</body>
+</html>

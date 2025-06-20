@@ -1,0 +1,292 @@
+/*──────────────────────────────────────────
+  CONTACT & SCHEDULE PAGE STYLES (contact.css)
+──────────────────────────────────────────*/
+
+/* 1) CONTACT SECTION */
+.contact-section {
+  position: relative;
+  background: url(bg-contact.jpg) center/cover no-repeat;
+  padding: 10rem 1rem 4rem;      /* ← your desired extra top padding */
+  overflow: hidden;
+}
+.contact-section .grid-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  z-index: 0;
+}
+.contact-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2) BADGE, TITLE, SUBTITLE */
+.contact-section .section-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+.contact-section .section-badge i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.contact-section .section-title {
+  font-family: var(--ff-title);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.contact-section .section-subtitle {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* 3) CONTACT INFO LIST */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-info li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.contact-info li i {
+  width: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+  color: var(--clr-primary);
+}
+.contact-info li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s;
+}
+.contact-info li a:hover {
+  color: var(--clr-primary);
+}
+/* split your two emails onto separate lines */
+.contact-info li p {
+  margin: 0.3rem 0 0.6rem;
+}
+
+/* 4) INQUIRY FORM CARD */
+.contact-card {
+  background: rgba(46, 13, 13, 0.85);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(78, 42, 42, 0.6);
+  padding: 2.5rem 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.contact-card h3 {
+  font-family: var(--ff-title);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.contact-card .form-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* text inputs */
+.contact-card .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  border-radius: 0;
+  color: #fff;
+  padding-left: 0;
+}
+.contact-card .form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+.contact-card .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--clr-primary);
+}
+
+/* textarea */
+.contact-card textarea.form-control {
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+/* dropdown (subject) */
+.contact-card .form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 0.75rem 2.5rem 0.75rem 0;
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  position: relative;
+  background-image:
+    url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' viewBox='0 0 4 5'><path d='M2 5L0 0h4L2 5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.6rem auto;
+}
+.contact-card .form-select::-ms-expand {
+  display: none;
+}
+.contact-card .form-select option {
+  background-color: #161616;
+  color: #fff;
+  padding: 0.5rem;
+}
+.contact-card .form-select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--clr-primary);
+}
+
+/* 5) SUBMIT BUTTON */
+.contact-card .btn-danger {
+  background: var(--clr-primary);
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-family: var(--ff-sub);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: auto;
+  align-self: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.contact-card .btn-danger:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* honeypot hide */
+input[name="botcheck"] {
+  display: none !important;
+}
+
+
+/* 6) SCHEDULE SECTION */
+.schedule-section {
+  background: #fff;
+  padding: 4rem 1rem;
+}
+.schedule-section .section-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+.schedule-section .section-badge i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.schedule-section .section-title {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-sec-2);
+  margin-bottom: 0.5rem;
+}
+.schedule-section .section-subtitle {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+/* 7) CALENDLY WRAPPER */
+.calendly-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* 8) RESPONSIVE & EQUAL-HEIGHT COLUMNS */
+@media (min-width: 992px) {
+  #contact .row {
+    display: flex;
+    align-items: stretch;
+  }
+  #contact .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .contact-info,
+  #contact .contact-card {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contact-card {
+    margin-top: 2rem;
+  }
+  .schedule-section .calendly-wrapper {
+    height: 600px;
+  }
+}
+
+/*──────────────────────────────────────────
+  FORCE TRANSPARENT INPUT/SELECT/TEAEXTAREA 
+  (including autofill) 
+──────────────────────────────────────────*/
+
+/* 1) Make every form control transparent by default */
+.contact-card .form-control,
+.contact-card .form-select,
+.contact-card textarea.form-control {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+/* 2) Kill the browser’s autofill styling in WebKit */
+.contact-card input:-webkit-autofill,
+.contact-card input:-webkit-autofill:hover,
+.contact-card input:-webkit-autofill:focus,
+.contact-card textarea:-webkit-autofill,
+.contact-card textarea:-webkit-autofill:hover,
+.contact-card textarea:-webkit-autofill:focus,
+.contact-card select:-webkit-autofill,
+.contact-card select:-webkit-autofill:hover,
+.contact-card select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;            /* white text */
+  background-color: transparent !important;             /* no fill color */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+          box-shadow: 0 0 0px 1000px transparent inset !important;
+}
+
+/* 3) Firefox autofill */
+.contact-card input:-moz-autofill,
+.contact-card textarea:-moz-autofill,
+.contact-card select:-moz-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  color: #fff !important;
+}

@@ -86,7 +86,44 @@
   }
 }
 
+@media (max-width: 991.98px) {
+  /* 1) Remove the red-border wrapper entirely */
+  .hero-form {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    gap: 0.75rem;
+    max-width: 400px;    /* or 100% */
+    width: 100%;
+    margin: 0 auto 1.5rem;
+  }
 
+  /* 2) White pill input only */
+  .hero-input {
+    background: #fff !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 50px !important;
+    padding: 0.75rem 1.25rem !important;
+    width: 100% !important;
+    box-shadow: none !important;
+  }
+  .hero-input::placeholder {
+    color: #999 !important;
+  }
+
+  /* 3) Full-width red button below */
+  .hero-btn {
+    width: 100% !important;
+    border-radius: 50px !important;
+    margin: 0 !important;
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+    box-shadow: none !important;
+  }
+}
 
 
 /* hero features */
@@ -114,35 +151,505 @@
   vertical-align: middle;   /* align nicely with the text */
 }
 
-/*──────────────────────────────────────────
-  SERVICES
-──────────────────────────────────────────*/
-.service-card{
-  background:url('https://via.placeholder.com/400x300') center/cover no-repeat;
-  border:none;border-radius:12px;overflow:hidden;position:relative;min-height:300px;
+/*========================================
+  SERVICES SECTION OVERRIDES
+========================================*/
+
+/* 1) Services badge – bigger pill */
+.services-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
 }
-.service-card::before{
-  content:'';position:absolute;inset:0;background:rgba(39,39,39,.6)
+
+/* Titles & subtitle */
+.services-title {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  font-weight: 700;
 }
-.service-card .card-body{position:relative;z-index:1}
-.service-icon{font-size:2.5rem;color:var(--clr-white)}
+.services-subtitle {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: var(--clr-sec-2);
+}
+
+/* 2) Service cards */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  background: url(services-bg.jpg) center/cover no-repeat;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  transition: transform .3s, box-shadow .3s;
+}
+.service-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(230,0,0,0.19);
+}
+
+/* Icon + text centered */
+.service-icon {
+  font-size: 3rem;
+  color: #fff;
+}
+.service-name {
+  font-family: var(--ff-sub);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.service-desc {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* 3) CTA button */
+.services-cta {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-sub);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(230,0,0,0.36);
+}
 
 /*──────────────────────────────────────────
-  GALLERY
+  SERVICE CARDS ▸ DARK OVERLAY
 ──────────────────────────────────────────*/
-#galleryCarousel .carousel-inner{border-radius:12px;overflow:hidden}
-.carousel-control-prev-icon,.carousel-control-next-icon{filter:invert(1)}
+.service-card {
+  position: relative;  /* ensure ::before sits behind content */
+  overflow: hidden;
+}
+
+/* overlay */
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* adjust opacity to taste */
+  z-index: 1;
+  border-radius: 16px;            /* match card rounding */
+}
+
+/* bump icon & text above the overlay */
+.service-card > .service-icon,
+.service-card > .service-name,
+.service-card > .service-desc {
+  position: relative;
+  z-index: 2;
+}
+
+
+/*========================================
+  GALLERY SECTION
+========================================*/
+
+/* Section background & text */
+.gallery-section {
+  background: var(--clr-sec-2);       /* #272727 or #090101 */
+  color: var(--clr-white);
+}
+.section-badge {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+.gallery-title {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.gallery-subtitle {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 4rem;
+  height: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.8;
+  background-size: 2rem 2rem;
+}
+
+/* Responsive image grid inside slides */
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* CTA button */
+.services-cta {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-sub);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(230,0,0,0.36);
+}
+
+/* Fade effect between slides */
+.carousel-fade .carousel-item {
+  transition: opacity 0.6s ease;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+.carousel-fade .carousel-item {
+  opacity: 0;
+}
 
 /*──────────────────────────────────────────
-  ABOUT
+  GALLERY – Polished Square Grid & Controls
 ──────────────────────────────────────────*/
-#about ul li i{color:var(--clr-primary)}
+/* 1) Section styling */
+.gallery-section {
+  background: var(--clr-sec-2);
+  color: var(--clr-white);
+}
+
+/* 2) Gallery badge (big pill) */
+.gallery-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+}
+
+/* 3) Frames for square images */
+.gallery-frame {
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 200px;              /* fix a square base */
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-frame:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+
+/* 4) Images inside frames: contain, not cover */
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* 5) Carousel controls – big hit targets & visible */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 1;
+  background-size: 2rem 2rem;
+}
+
+/* space arrows away from frames */
+.carousel-control-prev { left: 0.5rem; }
+.carousel-control-next { right: 0.5rem; }
+
+/* 6) CTA button same pill style */
+.services-cta {
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  transition: transform .2s, box-shadow .2s;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+}
+
+/* 7) Responsive wrapping */
+@media (max-width: 767.98px) {
+  .gallery-frame {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1rem;
+  }
+}
 
 /*──────────────────────────────────────────
-  FAQ
+   GALLERY SECTION – Pure CSS Upgrade
 ──────────────────────────────────────────*/
-.accordion-button{border-radius:8px;margin-bottom:.5rem;font-family:var(--ff-sub)}
-.accordion-body{background:#f9f9f9;border-radius:0 0 8px 8px}
+
+/* 1) SECTION & BADGE */
+.gallery-section {
+  background: var(--clr-sec-2);  /* dark bg */
+  color: #fff;
+}
+.gallery-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: .6rem 1.2rem;
+  border-radius: 50px;
+}
+
+/* 2) IMAGE FRAMES */
+.gallery-frame {
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform .3s, box-shadow .3s;
+}
+.gallery-frame:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+
+/* Full-contain images */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 3) CHEVRON ARROWS */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto; height: auto;
+  top: 50%; transform: translateY(-50%);
+  background: none; border: none; padding: .5rem;
+}
+.gallery-arrow {
+  font-size: 2rem;
+  color: #fff;
+  opacity: .8;
+  transition: opacity .2s;
+}
+.carousel-control-prev:hover .gallery-arrow,
+.carousel-control-next:hover .gallery-arrow {
+  opacity: 1;
+}
+.carousel-control-prev { left: 1rem; }
+.carousel-control-next { right: 1rem; }
+
+/* 4) CTA BUTTON (reuse Services style) */
+.services-cta {
+  /* no changes if already defined */
+}
+
+/* 5) RESPONSIVE: show only 1 image per slide on md & down */
+@media (max-width: 991.98px) {
+  /* hide all but the first frame in each carousel-item */
+  .carousel-item .gallery-frame:not(:first-child) {
+    display: none !important;
+  }
+  /* expand the single frame */
+  .carousel-item .gallery-frame:first-child {
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  /* slightly smaller frames on small phones */
+  @media (max-width: 575.98px) {
+    .carousel-item .gallery-frame:first-child {
+      width: 95% !important;
+      max-width: 280px !important;
+    }
+    .gallery-arrow {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/*──────────────────────────────────────────
+  Force‐show arrows on XL (≥1200px)
+──────────────────────────────────────────*/
+@media (min-width: 1200px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex !important;           /* undo any hiding */
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;                      /* hit‐target size */
+    height: 3.5rem;
+    background: rgba(0,0,0,0.4);        /* semi-opaque circle */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;                        /* sit above frames */
+  }
+  .carousel-control-prev { left: 1rem; }
+  .carousel-control-next { right: 1rem; }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);                  /* make icon white */
+    opacity: 1;
+    background-size: 2rem 2rem;         /* ensure large icon */
+  }
+}
+
+/*──────────────────────────────────────────
+  ABOUT SECTION
+──────────────────────────────────────────*/
+.about-section {
+  background: #fff;
+  color: #090101;
+}
+
+/* Reuse Services badge styling */
+.services-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+}
+
+/* Title & text */
+.section-title {
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.about-text {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Feature list */
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-list-item {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.about-list-item i {
+  color: var(--clr-primary);
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+/* CTA button */
+.about-cta {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.about-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230,0,0,0.4);
+}
+
+/* About image */
+.about-image {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .about-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .about-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
 
 /*──────────────────────────────────────────
   RESPONSIVE TWEAKS
