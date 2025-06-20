@@ -1,0 +1,288 @@
+/*──────────────────────────────────────────
+  SERVICES PAGE OVERRIDES
+──────────────────────────────────────────*/
+
+/* 1) HERO */
+.services-hero {
+  position: relative;
+  background: url('bg-services.jpg') center/cover no-repeat;
+  height: 60vh;
+  padding: 0;
+}
+.services-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.services-hero__content {
+  position: relative;
+  z-index: 1;
+  margin: auto;              /* centers vertically in flex container */
+  text-align: center;
+}
+.services-hero.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2) SERVICE CARDS
+   * centered text & icon, bigger height, overlay stays in ::before
+*/
+.service-card {
+  position: relative;
+  height: 360px;              /* increased height */
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* center vertically */
+  align-items: center;        /* center horizontally */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* overlay */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);/* slightly darker */
+  border-radius: 1rem;
+  z-index: 0;
+}
+
+/* bring content above overlay */
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* hover lift */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+
+/* 3) ICON centered at top */
+.service-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* 5) TEXT centered and white */
+.service-card h5,
+.service-card p {
+  color: #fff;
+  margin: 0;
+}
+.service-card p {
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+/* 6) CTA pill */
+.service-cta {
+  background: var(--clr-primary);
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 2rem;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+.service-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+}
+
+/* 4) you already have background-image rules */
+.card-img--affordable { background: url('services-card.jpg') center/cover no-repeat; }
+.card-img--ecommerce  { background: url('services-card.jpg') center/cover no-repeat; }
+.card-img--branding   { background: url('services-card.jpg') center/cover no-repeat; }
+.card-img--marketing  { background: url('services-card.jpg') center/cover no-repeat; }
+
+/* 7) Responsive adjustments */
+@media (max-width: 991.98px) {
+  .service-card { height: 300px; }
+}
+
+/* 3) ICON */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  align-self: center;
+}
+
+/* 4) BACKGROUND IMAGES */
+.card-img--affordable { background: url(services-card.jpg) center/cover no-repeat; }
+.card-img--ecommerce  { background: url(services-card.jpg)         center/cover no-repeat; }
+.card-img--branding   { background: url(services-card.jpg)          center/cover no-repeat; }
+.card-img--marketing  { background: url(services-card.jpg)         center/cover no-repeat; }
+
+/* 5) TEXT STYLES */
+.service-card h5 {
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1.25rem;
+}
+.service-card p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1rem;
+}
+
+/* 6) MODERN CTA BUTTON */
+.service-cta {
+  background: var(--clr-primary);
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.75rem;
+  font-family: var(--ff-sub);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  align-self: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.service-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+}
+
+/* 7) RESPONSIVE */
+@media (max-width: 991.98px) {
+  .services-hero { height: 60vh; }
+  .service-card { height: 240px; }
+}
+
+/* 8) FEATURE LIST */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-features li {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+/*──────────────────────────────────────────
+  TRUSTED BY LOGOS
+──────────────────────────────────────────*/
+.trusted-by {
+  background: #090101; /* or your dark brand shade */
+  color: #fff;
+}
+.trusted-by__title {
+  font-family: var(--ff-title);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.trusted-by__logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.trusted-by__logo {
+  max-height: 50px;
+  opacity: 0.6;
+  transition: opacity 0.3s, filter 0.3s;
+  filter: grayscale(1);
+}
+.trusted-by__logo:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 575.98px) {
+  .trusted-by__title {
+    font-size: 1.5rem;
+  }
+  .trusted-by__logo {
+    max-height: 40px;
+  }
+}
+
+/*──────────────────────────────────────────
+   CTA BUTTON (your reference style)
+──────────────────────────────────────────*/
+.services-cta {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-sub);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(230,0,0,0.36);
+}
+
+/*──────────────────────────────────────────
+   CTA SECTION LAYOUT
+──────────────────────────────────────────*/
+.cta-section {
+  position: relative;
+  background: url(cta-bg-2.jpg) center/cover no-repeat;
+  padding: 6rem 1rem;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+.cta-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.cta-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.cta-image img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.cta-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .cta-section {
+    padding: 4rem 1rem;
+  }
+  .cta-image {
+    max-width: 100%;
+  }
+  .cta-content {
+    text-align: center;
+  }
+}

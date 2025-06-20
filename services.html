@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services — Clean Design UK</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,200..1000;1,200..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap & Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Page-specific overrides -->
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (global include) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="CDUK small logo.webp" alt="Logo" width="80" height="80" class="me-2"/>
+        CleanDesignUK
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div id="navMenu" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">All Services</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / INTRO -->
+  <section class="services-hero d-flex">
+    <div class="services-hero__overlay"></div>
+    <div class="container services-hero__content text-center text-white">
+      <h1 class="display-5 fw-bold">CleanDesignUK Services</h1>
+      <p class="lead mb-0">
+        Choose from our tailored packages—monthly plans or one-off fees. Click through to see full details and pricing options.
+      </p>
+    </div>
+  </section>
+
+<!-- SERVICES GRID -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Affordable Websites -->
+      <div class="col-12 col-md-6 col-lg-6">
+        <a href="affordable-websites.html"
+           class="service-card card-img--affordable d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
+          <i class="bi bi-laptop service-icon"></i>
+          <h5 class="mb-2">Affordable Websites</h5>
+          <p class="mb-3">Starting at £15/month</p>
+          <ul class="service-features mb-3">
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Responsive web design for UK businesses</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                SEO-optimised structure & fast page loads</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Monthly updates & dedicated support</li>
+          </ul>
+          <button class="service-cta">View Details</button>
+        </a>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="col-12 col-md-6 col-lg-6">
+        <a href="ecommerce.html"
+           class="service-card card-img--ecommerce d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
+          <i class="bi bi-cart-fill service-icon"></i>
+          <h5 class="mb-2">E-Commerce Development</h5>
+          <p class="mb-3">Store solutions from £25/month</p>
+          <ul class="service-features mb-3">
+            <li>
+                <i class="bi bi-check-circle-fill"></i>
+                Secure payment integration & SSL</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>
+                Mobile-friendly checkout experience</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Inventory management & order tracking</li>
+          </ul>
+          <button class="service-cta">View Details</button>
+        </a>
+      </div>
+
+      <!-- Business Branding -->
+      <div class="col-12 col-md-6 col-lg-6">
+        <a href="business-branding.html"
+           class="service-card card-img--branding d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
+          <i class="bi bi-brush-fill service-icon"></i>
+          <h5 class="mb-2">Business Branding UK</h5>
+          <p class="mb-3">One-off or retainer</p>
+          <ul class="service-features mb-3">
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Logo & brand identity design</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Brand guidelines & collateral</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Stationery, signage & digital assets</li>
+          </ul>
+          <button class="service-cta">View Details</button>
+        </a>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="col-12 col-md-6 col-lg-6">
+        <a href="digital-marketing.html"
+           class="service-card card-img--marketing d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
+          <i class="bi bi-megaphone-fill service-icon"></i>
+          <h5 class="mb-2">Digital Marketing Services</h5>
+          <p class="mb-3">Campaigns & SEO, bespoke quotes</p>
+          <ul class="service-features mb-3">
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                On-page & off-page SEO optimisation</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                PPC, Google Ads & social media ads</li>
+            <li>
+                <i class="bi bi-check-circle-fill"></i>                
+                Content marketing & email campaigns</li>
+          </ul>
+          <button class="service-cta">View Details</button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="trusted-by py-5">
+  <div class="container text-center">
+    <h2 class="trusted-by__title mb-4">
+      Trusted by 50+ small businesses all over the world
+    </h2>
+    <div class="trusted-by__logos">
+      <img src="matt-ward-ppm-logo-white.jpg"   alt="Virogan"   class="trusted-by__logo" />
+      <img src="saac_logo.jpg"   alt="Martino"   class="trusted-by__logo" />
+      <img src="nwt-logo.png"   alt="Waverio"   class="trusted-by__logo" />
+      <img src="rona-rose-favicon.png"    alt="Vertex"    class="trusted-by__logo" />
+      <img src="logos/aromix.svg"    alt="Aromix"    class="trusted-by__logo" />
+      <img src="logos/lastfm.svg"    alt="Last.fm"   class="trusted-by__logo" />
+      <img src="logos/squarestone.svg" alt="SquareStone" class="trusted-by__logo" />
+      <img src="logos/fireli.svg"    alt="Fireli"    class="trusted-by__logo" />
+      <img src="logos/natroma.svg"   alt="Natroma"   class="trusted-by__logo" />
+      <img src="logos/merck.svg"     alt="Merck"     class="trusted-by__logo" />
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section py-5 text-center">
+  <div class="container">
+    <span class="faq-badge">
+      <i class="bi bi-question-circle"></i> FAQ
+    </span>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How much does a website cost?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Every project is custom-quoted. Starter websites begin around <strong>£850</strong>, while fully-featured e-commerce builds start at <strong>£2,500</strong>. After a discovery call we’ll send a transparent, fixed-price proposal.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you handle hosting &amp; maintenance?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Yes! We offer managed hosting on UK data centres with daily backups, SSL, performance monitoring, plus optional care plans for updates, security patches, and tweaks.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you improve my existing WordPress site?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          Absolutely. From speed optimisations to UX enhancements and full design refreshes, we’ll audit your site and implement high-impact fixes without losing data or rankings.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide copywriting &amp; SEO?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          We do. Our content team researches keywords, writes conversion-focused copy, and implements on-page SEO best practices so your site launches ready to rank.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a typical project take?</span>
+          <i class="faq-icon bi bi-plus-lg"></i>
+        </button>
+        <div class="faq-answer">
+          A brochure site typically runs <strong>3–4 weeks</strong>, while larger builds take <strong>6–8 weeks</strong>. We keep you in the loop with weekly progress updates.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="contact" class="cta-section">
+  <div class="container cta-container d-flex flex-wrap align-items-center">
+    <div class="cta-image flex-shrink-0">
+      <img src="bg-cta.jpg" alt="Creative workspace">
+    </div>
+    <div class="cta-content text-white text-center">
+      <span class="cta-badge mb-3">
+        <i class="bi bi-lightning-fill"></i>
+        Let’s Talk Strategy
+      </span>
+      <h2 class="cta-title mb-3">
+        Ready to Elevate Your Online Presence?
+      </h2>
+      <p class="cta-subtitle mb-4">
+        From lightning-fast websites to data-driven marketing, our Welsh team crafts clean,  
+        high-converting digital experiences.
+      </p>
+      <a href="contact.html" class="services-cta">
+        Get My Free Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER (global include) -->
+  <footer class="cduk-footer">
+    <div class="footer-inner">
+      <div class="f-col brand">
+        <div class="brand-row">
+          <img src="CDUK logo.png" alt="Clean Design UK"/>
+          <span class="brand-name">Clean Design UK</span>
+        </div>
+        <p>
+          Welsh web-design & digital-marketing studio crafting fast,
+          conversion-focused websites and data-driven campaigns for small
+          businesses across the UK.
+        </p>
+      </div>
+      <div class="f-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Policies</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Clean Design UK — Web Design & Marketing
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
