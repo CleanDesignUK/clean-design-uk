@@ -27,62 +27,125 @@
   justify-content: center;
 }
 
-/* 2) SERVICE CARDS
-   * centered text & icon, bigger height, overlay stays in ::before
-*/
+/*──────────────────────────────────────────
+  1) SERVICE CARDS — BASE
+────────────────────────────────────────────*/
 .service-card {
   position: relative;
-  height: 360px;              /* increased height */
+  min-height: 360px;               /* use min-height instead of fixed */
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;    /* center vertically */
-  align-items: center;        /* center horizontally */
+  justify-content: center;         /* center vertically */
+  align-items: center;             /* center horizontally */
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.5rem;
 }
 
-/* overlay */
 .service-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);/* slightly darker */
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 1rem;
   z-index: 0;
 }
 
-/* bring content above overlay */
 .service-card > * {
   position: relative;
   z-index: 1;
 }
 
-/* hover lift */
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 
-/* 3) ICON centered at top */
+/* 1) Increase space below the white “badge” */
+.service-card > p {
+  /* was margin-bottom: 1.5rem; */
+  margin-bottom: 2rem !important;
+}
+
+
+/*──────────────────────────────────────────
+  2) ICON
+────────────────────────────────────────────*/
 .service-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   color: #fff;
 }
 
-/* 5) TEXT centered and white */
-.service-card h5,
-.service-card p {
+/*──────────────────────────────────────────
+  3) TEXT
+────────────────────────────────────────────*/
+.service-card h5 {
   color: #fff;
-  margin: 0;
-}
-.service-card p {
-  opacity: 0.85;
-  margin-bottom: 1.5rem;
+  font-family: var(--ff-sub);
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
 }
 
-/* 6) CTA pill */
+.service-card p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+
+/*──────────────────────────────────────────
+  4) FEATURE LIST
+────────────────────────────────────────────*/
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/*──────────────────────────────────────────
+  4) PRICING BADGE
+────────────────────────────────────────────*/
+.service-card > p {
+  background: #fff;               /* white pill */
+  color: #333;                    /* dark text for contrast */
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+}
+
+/*──────────────────────────────────────────
+  5) FEATURE LIST — NO MORE RED CHECKS
+────────────────────────────────────────────*/
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.service-features li {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  padding-left: 0;                /* remove indent */
+}
+
+/*──────────────────────────────────────────
+  5) CTA BUTTON
+────────────────────────────────────────────*/
 .service-cta {
   background: var(--clr-primary);
   border: none;
@@ -93,126 +156,83 @@
   font-weight: 600;
   color: #fff;
   transition: background 0.2s, transform 0.2s;
+  margin-top: 1.5rem;
 }
+
 .service-cta:hover {
   background: var(--clr-sec-1);
   transform: translateY(-2px);
 }
 
-/* 4) you already have background-image rules */
+/*──────────────────────────────────────────
+  6) BACKGROUND IMAGES
+────────────────────────────────────────────*/
 .card-img--affordable { background: url('services-card.jpg') center/cover no-repeat; }
 .card-img--ecommerce  { background: url('services-card.jpg') center/cover no-repeat; }
 .card-img--branding   { background: url('services-card.jpg') center/cover no-repeat; }
 .card-img--marketing  { background: url('services-card.jpg') center/cover no-repeat; }
 
-/* 7) Responsive adjustments */
-@media (max-width: 991.98px) {
-  .service-card { height: 300px; }
-}
-
-/* 3) ICON */
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  align-self: center;
-}
-
-/* 4) BACKGROUND IMAGES */
-.card-img--affordable { background: url(services-card.jpg) center/cover no-repeat; }
-.card-img--ecommerce  { background: url(services-card.jpg)         center/cover no-repeat; }
-.card-img--branding   { background: url(services-card.jpg)          center/cover no-repeat; }
-.card-img--marketing  { background: url(services-card.jpg)         center/cover no-repeat; }
-
-/* 5) TEXT STYLES */
-.service-card h5 {
-  color: #fff;
-  font-family: var(--ff-sub);
-  font-size: 1.25rem;
-}
-.service-card p {
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 1rem;
-}
-
-/* 6) MODERN CTA BUTTON */
-.service-cta {
-  background: var(--clr-primary);
-  border: none;
-  border-radius: 50px;
-  padding: 0.5rem 1.75rem;
-  font-family: var(--ff-sub);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  align-self: center;
-  transition: background 0.2s, transform 0.2s;
-}
-.service-cta:hover {
-  background: var(--clr-sec-1);
-  transform: translateY(-2px);
-}
-
-/* 7) RESPONSIVE */
-@media (max-width: 991.98px) {
-  .services-hero { height: 60vh; }
-  .service-card { height: 240px; }
-}
-
-/* 8) FEATURE LIST */
-.service-features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.service-features li {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-}
-
 /*──────────────────────────────────────────
-  TRUSTED BY LOGOS
-──────────────────────────────────────────*/
-.trusted-by {
-  background: #090101; /* or your dark brand shade */
-  color: #fff;
-}
-.trusted-by__title {
-  font-family: var(--ff-title);
-  font-size: 2rem;
-  font-weight: 600;
-}
-.trusted-by__logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.trusted-by__logo {
-  max-height: 50px;
-  opacity: 0.6;
-  transition: opacity 0.3s, filter 0.3s;
-  filter: grayscale(1);
-}
-.trusted-by__logo:hover {
-  opacity: 1;
-  filter: none;
+  7) RESPONSIVE TWEAKS
+────────────────────────────────────────────*/
+/* a) Medium (≤992px): lower min-height, smaller text & padding */
+@media (max-width: 991.98px) {
+  .service-card {
+    min-height: 300px;
+    padding: 1.25rem;
+  }
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+  .service-card h5 {
+    font-size: 1.2rem;
+  }
+  .service-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .service-features li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    padding-left: 1.4rem;
+  }
+  .service-cta {
+    padding: 0.5rem 1.75rem;
+    font-size: 0.95rem;
+  }
 }
 
-/* Responsive tweaks */
-@media (max-width: 575.98px) {
-  .trusted-by__title {
-    font-size: 1.5rem;
+/* b) Small (≤768px): auto height, compact spacing */
+@media (max-width: 767.98px) {
+  .service-card {
+    min-height: auto;
+    padding: 1rem;
   }
-  .trusted-by__logo {
-    max-height: 40px;
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .service-card h5 {
+    font-size: 1.1rem;
+  }
+  .service-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .service-features li {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    padding-left: 1.2rem;
+  }
+  .service-cta {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
+
+
+
 
 /*──────────────────────────────────────────
    CTA BUTTON (your reference style)
@@ -236,53 +256,4 @@
   box-shadow: 0 8px 22px rgba(230,0,0,0.36);
 }
 
-/*──────────────────────────────────────────
-   CTA SECTION LAYOUT
-──────────────────────────────────────────*/
-.cta-section {
-  position: relative;
-  background: url(cta-bg-2.jpg) center/cover no-repeat;
-  padding: 6rem 1rem;
-  overflow: hidden;
-}
-.cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 0;
-}
-.cta-container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-.cta-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.cta-image img {
-  width: 100%;
-  border-radius: 0.5rem;
-}
-.cta-content {
-  flex: 1 1 300px;
-  max-width: 600px;
-}
 
-/* Responsive */
-@media (max-width: 991.98px) {
-  .cta-section {
-    padding: 4rem 1rem;
-  }
-  .cta-image {
-    max-width: 100%;
-  }
-  .cta-content {
-    text-align: center;
-  }
-}
