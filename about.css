@@ -1,0 +1,295 @@
+/*──────────────────────────────────────────
+  ABOUT PAGE OVERRIDES (about.css)
+──────────────────────────────────────────*/
+
+/*──────────────────────────────────────────
+   ABOUT HERO – Flexible & Responsive
+──────────────────────────────────────────*/
+.about-hero {
+  position: relative;
+  display: flex;               /* center vertically */
+  align-items: center;         /* center vertically */
+  justify-content: center;     /* center horizontally */
+  padding: 6rem 1rem;          /* lots of top/bottom breathing room */
+  background: url('about-bg-1.jpg') center/cover no-repeat;
+  height: 80vh;
+}
+
+
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;            /* constrain line-length on wide screens */
+  text-align: center;
+  color: #fff;                 /* or whatever your theme dictates */
+}
+
+.about-hero h1 {
+  font-family: var(--ff-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.about-hero p {
+  font-family: var(--ff-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: 1.5rem;
+}
+
+/* tweak padding on larger screens */
+@media (min-width: 992px) {
+  .about-hero {
+    padding: 8rem 2rem;
+  }
+}
+
+/* reduce padding on very small screens */
+@media (max-width: 576px) {
+  .about-hero {
+    padding: 4rem 1rem;
+  }
+}
+
+
+/*──────────────────────────────────────────
+   CORE IDENTITY – fully responsive
+──────────────────────────────────────────*/
+.core-identity {
+  position: relative;
+  background: url('about-bg-2.jpg') center/cover no-repeat;
+  /* remove fixed height, allow content to size it */
+  min-height: 400px;
+  padding: 4rem 0;            /* vertical breathing */
+  color: #fff;
+}
+.core-identity__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(71, 0, 0, 0.6);
+  z-index: 0;
+}
+.core-identity .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading & CTA */
+.core-identity .section-title {
+  font-family: var(--ff-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.core-identity .section-title .fst-italic {
+  font-family: var(--ff-body);
+  opacity: 0.8;
+}
+.core-identity .services-cta {
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.core-identity .services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(186,13,23,0.4);
+}
+
+/* Numbered boxes */
+.identity-box {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 12px;
+  transition: background 0.3s, border-color 0.3s;
+  cursor: pointer;   /* makes hover reliable */
+  display: flex;
+  flex-direction: column;
+}
+.identity-box .box-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.8;
+  transition: color 0.3s;
+}
+.identity-box .box-title {
+  font-family: var(--ff-sub);
+  margin: 0.5rem 0;
+  transition: color 0.3s;
+}
+.identity-box .box-desc {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+  transition: color 0.3s;
+}
+
+/* Hover → White card + dark text */
+.identity-box:hover {
+  background: #fff;
+  border-color: #fff;
+}
+.identity-box:hover .box-num,
+.identity-box:hover .box-title,
+.identity-box:hover .box-desc {
+  color: #222;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  /* center CTA on tablets */
+  .core-identity .row.align-items-center {
+    text-align: center;
+  }
+  .core-identity .services-cta {
+    margin: 1.5rem auto 0;
+  }
+  /* center text inside each box */
+  .identity-box {
+    text-align: center;
+  }
+}
+
+/* on very small (stacked) you get 1 column */
+@media (max-width: 575.98px) {
+  .core-identity { padding: 3rem 0; }
+  .identity-box { padding: 1.5rem; }
+}
+
+/*──────────────────────────────────────────
+   CORE IDENTITY – hover everywhere on hover-capable screens
+──────────────────────────────────────────*/
+
+/* only apply hover styles on devices that actually support hover */
+@media (hover: hover) and (pointer: fine) {
+  .identity-box {
+    transition: background 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+  }
+  .identity-box .box-num,
+  .identity-box .box-title,
+  .identity-box .box-desc {
+    transition: color 0.3s ease;
+  }
+
+  /* white background + dark text on hover */
+  .identity-box:hover {
+    background: #fff;
+    border-color: #fff;
+  }
+  .identity-box:hover .box-num,
+  .identity-box:hover .box-title,
+  .identity-box:hover .box-desc {
+    color: #222;
+  }
+}
+
+
+/*──────────────────────────────────────────
+   PARTNERS / TRUSTED BY SECTION
+──────────────────────────────────────────*/
+.partners-section {
+  background: var(--clr-white);    /* dark background */
+  color: var(--clr-sec-1);
+}
+.partners-section .section-title {
+  font-family: var(--ff-title);
+  font-size: 2rem;
+}
+.partners-description {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: var(--clr-primary);
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+/* Logos grid */
+.partner-logo {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  filter: none;                   /* ensure full-color */
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.partner-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive alignment */
+@media (max-width: 767.98px) {
+  .partner-logo {
+    max-height: 50px;
+  }
+}
+
+/* ──────────────────────────────────────────
+   PARTNERS / TRUSTED BY – logo centering & color
+────────────────────────────────────────── */
+
+/* ensure we’re not accidentally stripping out colour */
+.partner-logo {
+  filter: none !important;
+  /* center each image in its column */
+  display: block;
+  margin: 0 auto;
+  /* still constrain the height */
+  max-height: 100px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.partner-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* tighten things up a bit on very small screens */
+@media (max-width: 767.98px) {
+  .partner-logo {
+    max-height: 50px;
+  }
+}
+
+/* you already have this on your row, but just in case… */
+.partners-section .row {
+  justify-content: center;
+}
+
+
+/* 5) CTA BUTTON */
+.services-cta {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(230,0,0,0.36);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991.98px) {
+  .about-hero { height: 60vh; }
+  .identity-grid { grid-template-columns: 1fr; }
+  .expertise .row { flex-direction: column-reverse; }
+  .expertise .col-lg-6 { text-align: center; }
+  .trusted-businesses .logos-grid { gap: 1.5rem; }
+}

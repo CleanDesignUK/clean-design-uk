@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Studies — Clean Design UK</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,200..1000;1,200..1000&family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap & Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Gallery overrides -->
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (global include) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="CDUK small logo.webp" alt="Clean Design UK logo" width="80" height="80" class="me-2"/>
+        CleanDesignUK
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div id="navMenu" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INTRO: two-col heading + description -->
+  <section class="gallery-intro py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold mb-0">Our Project Gallery</h1>
+        </div>
+        <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+          <p class="lead mb-0">
+            From holistic coaching experiences to premium cable-protection ecommerce, explore a curated selection of our latest work—and see how we help UK small businesses stand out online.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS GRID: 2 columns on md+ -->
+  <section class="projects-grid py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor.png" alt="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">The Sacred Soul Academy & Coaching</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO</span>
+                <span class="badge">UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor.png" alt="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Matt Ward Plastering & Property Maintenance</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO</span>
+                <span class="badge">UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="glow-cable-guard-professional-web-designer-north-wales-bangor.jpg" alt="glow-cable-guard-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Glow Cable Guard</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">E-commerce design</span>
+                <span class="badge">SEO</span>
+                <span class="badge">Logo design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">FireFly</h3>
+              <p class="card-text">
+                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Prola</h3>
+              <p class="card-text">
+                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">UI.UX</span>
+                <span class="badge">Branding</span>
+                <span class="badge">Motion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-card h-100 d-flex flex-column">
+            <div class="card-img">
+              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Third Project</h3>
+              <p class="card-text">
+                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Painting</span>
+                <span class="badge">Decorating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+      <!-- TESTIMONIAL -->
+<section id="testimonials" class="cduk-testimonials">
+  <div class="testimonials-inner container-lg">
+    <!-- Badge + Title -->
+    <span class="badge testimonials-badge">
+      <i class="bi bi-star-fill me-1"></i>
+      Clean Design UK
+    </span>
+    <h2 class="testimonials-title">Trusted by 50+ Happy Clients</h2>
+
+    <!-- All six cards: summary + 5 reviews -->
+    <div class="testimonials-cards">
+      <!-- Summary card -->
+      <div class="t-box t-summary">
+        <div class="t-summary__brand">
+          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <span>Clean Design UK</span>
+        </div>
+        <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
+        <div class="t-summary__rating">
+          <span class="big">5<span class="small">/5</span></span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+        </div>
+        <a href="https://g.co/kgs/hPtd1Lf" target="_blank" rel="noopener" class="t-summary__btn">
+          See More Reviews <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="t-box">
+        <h4>Maxine Phillips</h4>
+        <time>May 9, 2025</time>
+        <p>From the initial consultation to the final product, Clean Design UK, especially Jesse, was fantastic. The final website was even better than I envisioned. Highly recommend!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="t-box">
+        <h4>Tina</h4>
+        <time>Apr 20, 2025</time>
+        <p>Jesse has been so patient and understanding. Always in contact, arranging meetings and sending emails to keep us updated. Many thanks for all your hard work.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="t-box">
+        <h4>Nicholas Taylor</h4>
+        <time>Mar 18, 2025</time>
+        <p>Clean Design UK produced a detailed report with clear, actionable steps to improve my site (JustWriteRight.co.uk). Done quickly with great communication.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="t-box">
+        <h4>Nathan Flatt</h4>
+        <time>Feb 27, 2025</time>
+        <p>Jesse gave professional, unique advice on setting up my business. Friendly and easy to talk to — a great guy!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="t-box">
+        <h4>May Berbery-Canvin</h4>
+        <time>Jan 31, 2025</time>
+        <p>Excellent service and creativity. I recommend Clean Design to anyone wanting a neat, professional website and logo.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA SECTION -->
+<section id="contact" class="cta-section">
+  <div class="container cta-container">
+        <div class="cta-image">
+      <img src="bg-cta.jpg" alt="Creative workspace">
+    </div>
+    <div class="cta-content">
+      <span class="cta-badge">
+        <i class="bi bi-lightning-fill"></i>
+        Let’s Talk Strategy
+      </span>
+      <h2 class="cta-title">
+        Ready to Elevate Your Online Presence?
+      </h2>
+      <p class="cta-subtitle">
+        From lightning-fast websites to data-driven marketing, our Welsh team crafts clean, high-converting digital experiences.  
+        Fill in the form below for a free, no-obligation quote.
+      </p>
+          <button type="submit" class="cta-btn">
+            Get My Free Quote
+          </button>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER (global include) -->
+  <footer class="cduk-footer">
+    <div class="footer-inner">
+      <div class="f-col brand">
+        <div class="brand-row">
+          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <span class="brand-name">Clean Design UK</span>
+        </div>
+        <p>
+          Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.
+        </p>
+      </div>
+      <div class="f-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Case Studies</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h5>Policies</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Clean Design UK — Web Design & Marketing
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

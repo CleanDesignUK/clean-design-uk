@@ -1,0 +1,137 @@
+/*──────────────────────────────────────────
+  INTRO
+──────────────────────────────────────────*/
+.gallery-intro {
+  /* push below fixed navbar */
+  margin-top: 6rem;
+
+  /* make it a positioned container */
+  position: relative;
+  overflow: hidden;
+
+  /* background image */
+  background: url(gallery-bg.jpg) center/cover no-repeat;
+
+  /* ensure text contrast */
+  color: #fff;
+}
+
+/* dark overlay layer */
+.gallery-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+/* bring your content above the overlay */
+.gallery-intro .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* tweak typography for white-on-image */
+.gallery-intro h1,
+.gallery-intro .lead {
+  color: #fff;
+}
+
+.gallery-intro .lead {
+  opacity: 0.9;
+}
+
+/* responsive adjustments (optional) */
+@media (max-width: 991.98px) {
+  .gallery-intro {
+    padding-top: 4rem;  /* a bit less top padding on tablet */
+    padding-bottom: 3rem;
+  }
+}
+
+/*──────────────────────────────────────────
+  PROJECT CARDS
+──────────────────────────────────────────*/
+
+.projects-grid.bg-white {
+  background-color: #f5f5f5 !important;
+}
+
+/* each card container */
+.gallery-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover “lift” */
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+/* image fills top, fully rounded top corners */
+.gallery-card .card-img img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+/* body padding & layout */
+.gallery-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  font-family: var(--ff-sub);
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.card-text {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem; /* push tags to bottom */
+  color: #555;
+}
+
+/* pill-style tags */
+.card-tags {
+  margin-top: 1rem;
+}
+.card-tags .badge {
+  background: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  color: #444;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.card-tags .badge:hover {
+  background: var(--clr-primary);
+  color: #fff;
+  border-color: var(--clr-primary);
+}
+
+/*──────────────────────────────────────────
+  RESPONSIVE TWEAKS
+──────────────────────────────────────────*/
+/* push intro down on mobile so navbar doesn’t overlap */
+@media (max-width: 991.98px) {
+  .gallery-intro {
+    margin-top: 4.5rem;
+  }
+}
+
+/* stack two-col intro on small */
+@media (max-width: 767.98px) {
+  .gallery-intro .row > [class*="col-"] {
+    text-align: center !important;
+  }
+}

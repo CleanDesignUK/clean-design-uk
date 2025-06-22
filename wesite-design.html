@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Design Packages — Clean Design UK</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,200..1000;1,200..1000&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap & Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Page-specific -->
+  <link rel="stylesheet" href="website-design.css" />
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+
+
+</head>
+<body>
+
+  <!-- NAVBAR (global include) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="CDUK small logo.webp" alt="Logo" width="80" height="80" class="me-2" />
+        CleanDesignUK
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div id="navMenu" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="website-design.html">Website Design</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="wd-shared-bg">
+  <!-- HERO -->
+  <section class="wd-hero d-flex text-center text-white">
+    <div class="wd-hero__overlay"></div>
+    <div class="container wd-hero__content">
+      <h1 class="display-5 fw-bold">Website Design Packages</h1>
+      <p class="lead mb-0">
+        Choose a one-off project fee or an affordable monthly plan—tailored for individuals &amp; small businesses.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- PACKAGES -->
+  <section class="wd-packages-section position-relative text-white">
+    <div class="wd-hero__overlay"></div>
+    <div class="container position-relative wd-packages-content mode-oneoff">
+      <!-- Toggle Pill -->
+      <div class="pricing-toggle-container">
+        <div class="pricing-toggle">
+          <button class="toggle-btn active" data-mode="oneoff">One-Off</button>
+          <button class="toggle-btn" data-mode="monthly">Monthly</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+          <div class="wd-card d-flex flex-column h-100">
+            <h5 class="wd-card-title">Basic Portfolio Website</h5>
+            <div class="wd-card-price mb-3">
+              <span class="package-price"
+                    data-one-off="£250"
+                    data-monthly="£20"></span>
+            </div>
+            <ul class="wd-card-features flex-grow-1 list-unstyled mb-4">
+              <li><i class="bi bi-check-circle-fill me-2"></i>1 custom-designed page</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Responsive design</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Basic SEO optimisation</li>
+            </ul>
+            <a href="contact.html" class="btn wd-select-btn mt-auto">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+          <div class="wd-card d-flex flex-column h-100">
+            <h5 class="wd-card-title">Basic Business Website</h5>
+            <div class="wd-card-price mb-3">
+              <span class="package-price"
+                    data-one-off="£400"
+                    data-monthly="£30"></span>
+            </div>
+            <ul class="wd-card-features flex-grow-1 list-unstyled mb-4">
+              <li><i class="bi bi-check-circle-fill me-2"></i>Up to 5 custom pages</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Responsive design</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Basic SEO optimisation</li>
+            </ul>
+            <a href="contact.html" class="btn wd-select-btn mt-auto">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+          <div class="wd-card d-flex flex-column h-100">
+            <h5 class="wd-card-title">Service Website Redesign</h5>
+            <div class="wd-card-price mb-3">
+              <span class="package-price"
+                    data-one-off="£300"
+                    data-monthly="£25"></span>
+            </div>
+            <ul class="wd-card-features flex-grow-1 list-unstyled mb-4">
+              <li><i class="bi bi-check-circle-fill me-2"></i>Modern visual overhaul</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Improved navigation</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>SEO focus</li>
+            </ul>
+            <a href="contact.html" class="btn wd-select-btn mt-auto">Select Package</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+          <div class="wd-card d-flex flex-column h-100">
+            <h5 class="wd-card-title">Dynamic Service Website</h5>
+            <div class="wd-card-price mb-3">
+              <span class="package-price"
+                    data-one-off="£1020"
+                    data-monthly="£90"></span>
+            </div>
+            <ul class="wd-card-features flex-grow-1 list-unstyled mb-4">
+              <li><i class="bi bi-check-circle-fill me-2"></i>Custom dynamic features</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>CMS integration</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Advanced SEO</li>
+            </ul>
+            <a href="contact.html" class="btn wd-select-btn mt-auto">Select Package</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+    <!-- TESTIMONIAL -->
+<section id="testimonials" class="cduk-testimonials">
+  <div class="testimonials-inner container-lg">
+    <!-- Badge + Title -->
+    <span class="badge testimonials-badge">
+      <i class="bi bi-star-fill me-1"></i>
+      Clean Design UK
+    </span>
+    <h2 class="testimonials-title">Trusted by 50+ Happy Clients</h2>
+
+    <!-- All six cards: summary + 5 reviews -->
+    <div class="testimonials-cards">
+      <!-- Summary card -->
+      <div class="t-box t-summary">
+        <div class="t-summary__brand">
+          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <span>Clean Design UK</span>
+        </div>
+        <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
+        <div class="t-summary__rating">
+          <span class="big">5<span class="small">/5</span></span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+        </div>
+        <a href="https://g.co/kgs/hPtd1Lf" target="_blank" rel="noopener" class="t-summary__btn">
+          See More Reviews <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="t-box">
+        <h4>Maxine Phillips</h4>
+        <time>May 9, 2025</time>
+        <p>From the initial consultation to the final product, Clean Design UK, especially Jesse, was fantastic. The final website was even better than I envisioned. Highly recommend!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="t-box">
+        <h4>Tina</h4>
+        <time>Apr 20, 2025</time>
+        <p>Jesse has been so patient and understanding. Always in contact, arranging meetings and sending emails to keep us updated. Many thanks for all your hard work.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="t-box">
+        <h4>Nicholas Taylor</h4>
+        <time>Mar 18, 2025</time>
+        <p>Clean Design UK produced a detailed report with clear, actionable steps to improve my site (JustWriteRight.co.uk). Done quickly with great communication.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="t-box">
+        <h4>Nathan Flatt</h4>
+        <time>Feb 27, 2025</time>
+        <p>Jesse gave professional, unique advice on setting up my business. Friendly and easy to talk to — a great guy!</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="t-box">
+        <h4>May Berbery-Canvin</h4>
+        <time>Jan 31, 2025</time>
+        <p>Excellent service and creativity. I recommend Clean Design to anyone wanting a neat, professional website and logo.</p>
+        <div class="stars">★ ★ ★ ★ ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA SECTION -->
+<section id="contact" class="cta-section">
+  <div class="container cta-container">
+        <div class="cta-image">
+      <img src="bg-cta.jpg" alt="Creative workspace">
+    </div>
+    <div class="cta-content">
+      <span class="cta-badge">
+        <i class="bi bi-lightning-fill"></i>
+        Let’s Talk Strategy
+      </span>
+      <h2 class="cta-title">
+        Ready to Elevate Your Online Presence?
+      </h2>
+      <p class="cta-subtitle">
+        From lightning-fast websites to data-driven marketing, our Welsh team crafts clean, high-converting digital experiences.  
+        Fill in the form below for a free, no-obligation quote.
+      </p>
+          <button type="submit" class="cta-btn"onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jesse-cleandesignuk/30min'});return false;">
+          Schedule Your Free 30 Min Chat
+          </button>
+        </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER (global include) -->
+  <footer class="cduk-footer">
+    <div class="footer-inner">
+      <div class="f-col brand">
+        <div class="brand-row">
+          <img src="CDUK logo.png" alt="Clean Design UK">
+          <span class="brand-name">Clean Design UK</span>
+        </div>
+        <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites for small businesses across the UK.</p>
+      </div>
+      <div class="f-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Policies</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Clean Design UK — Web Design & Marketing
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Toggle script -->
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // switch active class
+        document.querySelectorAll('.toggle-btn')
+                .forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // update container mode
+        const container = document.querySelector('.wd-packages-content');
+        container.classList.toggle('mode-monthly', btn.dataset.mode==='monthly');
+        container.classList.toggle('mode-oneoff',  btn.dataset.mode==='oneoff');
+      });
+    });
+  </script>
+
+
+
+
+</body>
+</html>

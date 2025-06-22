@@ -5,16 +5,11 @@
 /* 1) HERO */
 .services-hero {
   position: relative;
-  background: url('bg-services.jpg') center/cover no-repeat;
+  background: url(about-bg-1.jpg) center/cover no-repeat;
   height: 60vh;
   padding: 0;
 }
-.services-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
+
 .services-hero__content {
   position: relative;
   z-index: 1;
@@ -28,45 +23,107 @@
 }
 
 /*──────────────────────────────────────────
-  1) SERVICE CARDS — BASE
-────────────────────────────────────────────*/
-.service-card {
+  SERVICES SECTION – BACKGROUND + OVERLAY
+──────────────────────────────────────────*/
+.services-section {
   position: relative;
-  min-height: 360px;               /* use min-height instead of fixed */
-  border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;         /* center vertically */
-  align-items: center;             /* center horizontally */
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 1.5rem;
+  background: url(services-bg-3.jpg) center/cover no-repeat;
 }
-
-.service-card::before {
-  content: "";
+.services-section__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 1rem;
+  background: rgba(0,0,0,0.4);
   z-index: 0;
 }
-
-.service-card > * {
+.services-section__content {
   position: relative;
   z-index: 1;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+/*──────────────────────────────────────────
+  SEO DESCRIPTION
+──────────────────────────────────────────*/
+.services-description {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.9);
 }
 
-/* 1) Increase space below the white “badge” */
-.service-card > p {
-  /* was margin-bottom: 1.5rem; */
-  margin-bottom: 2rem !important;
+/*──────────────────────────────────────────
+  SERVICE BOXES (like Core Identity cards)
+──────────────────────────────────────────*/
+.service-box {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 0.75rem;
+  display: flex;                /* vertical flex with pushes CTA to bottom */
+  flex-direction: column;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  color: #fff;
 }
+.service-box .box-icon i {
+  font-size: 2rem;
+  color: var(--clr-primary);
+}
+.service-box .box-title {
+  font-family: var(--ff-sub);
+  font-size: 1.25rem;
+}
+.service-box .box-text {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.service-box ul {
+  margin-bottom: 1.5rem;
+}
+.service-box i.bi-check-circle-fill {
+  color: var(--clr-primary);
+}
+
+/* hover → solid white, dark text */
+.service-box:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #222;
+}
+.service-box:hover .box-icon i {
+  /* keep primary-red icon */
+  color: var(--clr-primary);
+}
+
+/*──────────────────────────────────────────
+  CTA BUTTON (reuse your global)
+──────────────────────────────────────────*/
+.services-cta {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: #fff;
+  font-family: var(--ff-sub);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.services-cta:hover {
+  background: var(--clr-sec-1);
+  transform: translateY(-2px);
+}
+
+/*──────────────────────────────────────────
+  RESPONSIVE GRID
+──────────────────────────────────────────*/
+@media (max-width: 991.98px) {
+  .services-section__content {
+    text-align: center;
+  }
+  .service-box {
+    text-align: center;
+  }
+}
+
 
 
 /*──────────────────────────────────────────

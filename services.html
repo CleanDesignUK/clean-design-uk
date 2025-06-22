@@ -65,101 +65,83 @@
   </section>
 
 <!-- SERVICES GRID -->
-<section class="services-section py-5">
-  <div class="container">
+<!-- SERVICES SECTION -->
+<section class="services-section position-relative text-white py-5">
+  <!-- background image + overlay -->
+  <div class="services-section__overlay"></div>
+
+  <div class="container position-relative services-section__content">
+    <!-- SEO description -->
+    <p class="services-description text-center lead mb-5">
+      At Clean Design UK, we specialise in professional website design, bespoke e-commerce development, impactful brand identity and data-driven digital marketing. Whether you’re looking for an affordable monthly plan or a one-off project fee, our tailored solutions help UK small businesses grow online.
+    </p>
+
     <div class="row g-4 justify-content-center">
 
       <!-- Affordable Websites -->
-      <div class="col-12 col-md-6 col-lg-6">
-        <a href="affordable-websites.html"
-           class="service-card card-img--affordable d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
-          <i class="bi bi-laptop service-icon"></i>
-          <h5 class="mb-2">Affordable Websites</h5>
-          <p class="mb-3">Starting at £15/month</p>
-          <ul class="service-features mb-3">
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Responsive web design for UK businesses</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                SEO-optimised structure & fast page loads</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Monthly updates & dedicated support</li>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+        <a href="affordable-websites.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
+          <span class="box-icon mb-3"><i class="bi bi-laptop-fill"></i></span>
+          <h5 class="box-title mb-2">Affordable Websites</h5>
+          <p class="box-text mb-3">Professional website design from £15/month.</p>
+          <ul class="list-unstyled mb-4">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Responsive web design</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>SEO-optimised & fast</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Dedicated monthly support</li>
           </ul>
-          <button class="service-cta">View Details</button>
+          <span class="services-cta mt-auto">View Details</span>
         </a>
       </div>
 
       <!-- E-Commerce -->
-      <div class="col-12 col-md-6 col-lg-6">
-        <a href="ecommerce.html"
-           class="service-card card-img--ecommerce d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
-          <i class="bi bi-cart-fill service-icon"></i>
-          <h5 class="mb-2">E-Commerce Development</h5>
-          <p class="mb-3">Store solutions from £25/month</p>
-          <ul class="service-features mb-3">
-            <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Secure payment integration & SSL</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Mobile-friendly checkout experience</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Inventory management & order tracking</li>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+        <a href="ecommerce.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
+          <span class="box-icon mb-3"><i class="bi bi-cart-fill"></i></span>
+          <h5 class="box-title mb-2">E-Commerce Development</h5>
+          <p class="box-text mb-3">Store solutions from £25/month.</p>
+          <ul class="list-unstyled mb-4">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Secure payments & SSL</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Mobile-friendly checkout</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Inventory & order tracking</li>
           </ul>
-          <button class="service-cta">View Details</button>
+          <span class="services-cta mt-auto">View Details</span>
         </a>
       </div>
 
       <!-- Business Branding -->
-      <div class="col-12 col-md-6 col-lg-6">
-        <a href="business-branding.html"
-           class="service-card card-img--branding d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
-          <i class="bi bi-brush-fill service-icon"></i>
-          <h5 class="mb-2">Business Branding UK</h5>
-          <p class="mb-3">One-off or retainer</p>
-          <ul class="service-features mb-3">
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Logo & brand identity design</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Brand guidelines & collateral</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Stationery, signage & digital assets</li>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+        <a href="business-branding.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
+          <span class="box-icon mb-3"><i class="bi bi-brush-fill"></i></span>
+          <h5 class="box-title mb-2">Business Branding UK</h5>
+          <p class="box-text mb-3">One-off projects or ongoing retainers.</p>
+          <ul class="list-unstyled mb-4">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Logo & identity design</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Brand guidelines & collateral</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Digital & print assets</li>
           </ul>
-          <button class="service-cta">View Details</button>
+          <span class="services-cta mt-auto">View Details</span>
         </a>
       </div>
 
       <!-- Digital Marketing -->
-      <div class="col-12 col-md-6 col-lg-6">
-        <a href="digital-marketing.html"
-           class="service-card card-img--marketing d-flex flex-column justify-content-center align-items-center text-center text-decoration-none p-4">
-          <i class="bi bi-megaphone-fill service-icon"></i>
-          <h5 class="mb-2">Digital Marketing Services</h5>
-          <p class="mb-3">Campaigns & SEO, bespoke quotes</p>
-          <ul class="service-features mb-3">
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                On-page & off-page SEO optimisation</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                PPC, Google Ads & social media ads</li>
-            <li>
-                <i class="bi bi-check-circle-fill"></i>                
-                Content marketing & email campaigns</li>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+        <a href="digital-marketing.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
+          <span class="box-icon mb-3"><i class="bi bi-megaphone-fill"></i></span>
+          <h5 class="box-title mb-2">Digital Marketing</h5>
+          <p class="box-text mb-3">SEO, PPC, social & email campaigns.</p>
+          <ul class="list-unstyled mb-4">
+            <li><i class="bi bi-check-circle-fill me-2"></i>On-page & off-page SEO</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Google Ads & social ads</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Content & email marketing</li>
           </ul>
-          <button class="service-cta">View Details</button>
+          <span class="services-cta mt-auto">View Details</span>
         </a>
       </div>
 
     </div>
   </div>
 </section>
+
 
     <!-- TESTIMONIAL -->
 <section id="testimonials" class="cduk-testimonials">
@@ -367,5 +349,19 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // FAQ toggle script
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      const icon = btn.querySelector('.faq-icon');
+      icon.classList.toggle('bi-plus-lg', !open);
+      icon.classList.toggle('bi-dash-lg', open);
+    });
+  });
+</script>
+  
 </body>
 </html>
