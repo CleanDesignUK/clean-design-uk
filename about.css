@@ -45,13 +45,22 @@
   }
 }
 
-/* reduce padding on very small screens */
-@media (max-width: 576px) {
-  .about-hero {
-    padding: 4rem 1rem;
-  }
-}
 
+
+/* phones ≤ 575 px  ─────────────────────── */
+@media (max-width: 575.98px) {
+
+  .about-hero{
+    height: auto;          /* ❊ remove the hard 80vh cap   */
+    min-height: 80vh;     /* optional: still fills screen */
+    padding: 8rem 1.25rem 2rem;
+    align-items: flex-start;/* top-align looks nicer once  */
+  }
+
+  /* OPTIONAL – trim text size a hair further */
+  .about-hero h1{font-size:2rem;}
+  .about-hero p {font-size:1rem;}
+}
 
 /*──────────────────────────────────────────
    CORE IDENTITY – fully responsive
@@ -206,7 +215,7 @@
 .partners-description {
   font-family: var(--ff-body);
   font-size: 1rem;
-  color: var(--clr-primary);
+  color: black;
   max-width: 720px;
   margin: 0 auto 3rem;
 }

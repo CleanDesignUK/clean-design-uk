@@ -3,7 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services — Clean Design UK</title>
+  <!-- Primary SEO -->
+  <title>Web Design, E-Commerce, Branding & Digital Marketing Services North Wales | Clean Design UK</title>
+  <meta name="description"
+        content="Clean Design UK provides professional website design, bespoke e-commerce development, impactful business branding and data-driven digital marketing services for small businesses in Bangor, Caernarfon, Anglesey and across North Wales. Affordable monthly plans and one-off fees available.">
+  <link rel="canonical" href="https://cleandesignuk.com/services">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="North Wales Web & Digital Marketing Services | Clean Design UK">
+  <meta property="og:description" content="Professional website design, e-commerce builds, branding & digital marketing across Bangor, Caernarfon, Anglesey and North Wales. Flexible monthly plans or one-off projects.">
+  <meta property="og:url"         content="https://cleandesignuk.com/services">
+  <meta property="og:image"       content="https://cleandesignuk.com/assets/og-services.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Local Business / ServicePage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": [
+      "Website Design",
+      "E-Commerce Development",
+      "Branding & Logo Design",
+      "Digital Marketing"
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Clean Design UK",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4 Ffordd Cerrig Mawr",
+        "addressLocality": "Caergeiliog",
+        "addressRegion": "Anglesey",
+        "postalCode": "LL65 3LU",
+        "addressCountry": "GB"
+      },
+      "areaServed": ["Bangor", "Caernarfon", "Anglesey", "North Wales", "United Kingdom"],
+      "url": "https://cleandesignuk.com"
+    },
+    "url": "https://cleandesignuk.com/services",
+    "description": "Tailored web design, e-commerce, branding and digital marketing packages—monthly plans or one-off fees—for small businesses across North Wales."
+  }
+  </script>
+
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -27,27 +70,65 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Page-specific overrides -->
   <link rel="stylesheet" href="services.css" />
+
+<!-- Calendly badge widget begin -->
+<link  href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  window.addEventListener('load', function () {
+    Calendly.initBadgeWidget({
+      url:  'https://calendly.com/jesse-cleandesignuk/30min',
+      text: 'Free Consultation + 30 Days Hosting',
+      color: '#6c181c',
+      textColor: '#ffffff'
+    });
+  });
+</script>
+<!-- Calendly badge widget end -->
+
+<!-- FAVICONS -->
+<link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
+<link rel="icon"       type="image/png" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
+<link rel="icon"       type="image/svg+xml"           href="CDUK small logo 50x50.jpg">    <!-- optional modern -->
+<link rel="apple-touch-icon"             sizes="180x180" href="CDUK small logo 50x50.jpg">
+<meta name="msapplication-TileImage"     content="mstile-150.png">
+<meta name="msapplication-TileColor"     content="#6c181c">
+
+
 </head>
 <body>
 
   <!-- NAVBAR (global include) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="CDUK small logo.webp" alt="Logo" width="80" height="80" class="me-2"/>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="cduk-logo-80.png" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <i class="bi bi-list fs-2"></i>
       </button>
+
       <div id="navMenu" class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">All Services</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+            <li><a class="dropdown-item" href="wesite-design.html">Website Design</a></li>
+            <li><a class="dropdown-item" href="ecommerce.html">E-commerce</a></li>
+            <li><a class="dropdown-item" href="branding.html">Business Branding</a></li>
+            <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
+          </ul>
+        </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -57,14 +138,13 @@
   <section class="services-hero d-flex">
     <div class="services-hero__overlay"></div>
     <div class="container services-hero__content text-center text-white">
-      <h1 class="display-5 fw-bold">CleanDesignUK Services</h1>
+      <h1 class="display-5 fw-bold">Web Design, E-Commerce, Branding & Digital Marketing in North Wales</h1>
       <p class="lead mb-0">
-        Choose from our tailored packages—monthly plans or one-off fees. Click through to see full details and pricing options.
+        Choose a flexible monthly website package or a clear one-off project fee, then dive into the service that fits your goals.      
       </p>
     </div>
   </section>
 
-<!-- SERVICES GRID -->
 <!-- SERVICES SECTION -->
 <section class="services-section position-relative text-white py-5">
   <!-- background image + overlay -->
@@ -73,8 +153,8 @@
   <div class="container position-relative services-section__content">
     <!-- SEO description -->
     <p class="services-description text-center lead mb-5">
-      At Clean Design UK, we specialise in professional website design, bespoke e-commerce development, impactful brand identity and data-driven digital marketing. Whether you’re looking for an affordable monthly plan or a one-off project fee, our tailored solutions help UK small businesses grow online.
-    </p>
+      Clean Design UK provides search-optimised website design, bespoke e-commerce development, signature branding, and data-driven digital-marketing services for small businesses across Anglesey, Bangor, Caernarfon, Holyhead, Llandudno and the wider North Wales region.
+ </p>
 
     <div class="row g-4 justify-content-center">
 
@@ -89,7 +169,7 @@
             <li><i class="bi bi-check-circle-fill me-2"></i>SEO-optimised & fast</li>
             <li><i class="bi bi-check-circle-fill me-2"></i>Dedicated monthly support</li>
           </ul>
-          <span class="services-cta mt-auto">View Details</span>
+          <span class="services-cta mt-auto">View Web Design</span>
         </a>
       </div>
 
@@ -104,13 +184,13 @@
             <li><i class="bi bi-check-circle-fill me-2"></i>Mobile-friendly checkout</li>
             <li><i class="bi bi-check-circle-fill me-2"></i>Inventory & order tracking</li>
           </ul>
-          <span class="services-cta mt-auto">View Details</span>
+          <span class="services-cta mt-auto">View E-commerce</span>
         </a>
       </div>
 
       <!-- Business Branding -->
       <div class="col-12 col-md-6 col-lg-6 col-xl-3">
-        <a href="business-branding.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
+        <a href="branding.html" class="service-box d-flex flex-column p-4 text-center text-decoration-none h-100">
           <span class="box-icon mb-3"><i class="bi bi-brush-fill"></i></span>
           <h5 class="box-title mb-2">Business Branding UK</h5>
           <p class="box-text mb-3">One-off projects or ongoing retainers.</p>
@@ -119,7 +199,7 @@
             <li><i class="bi bi-check-circle-fill me-2"></i>Brand guidelines & collateral</li>
             <li><i class="bi bi-check-circle-fill me-2"></i>Digital & print assets</li>
           </ul>
-          <span class="services-cta mt-auto">View Details</span>
+          <span class="services-cta mt-auto">Explore Branding</span>
         </a>
       </div>
 
@@ -134,7 +214,7 @@
             <li><i class="bi bi-check-circle-fill me-2"></i>Google Ads & social ads</li>
             <li><i class="bi bi-check-circle-fill me-2"></i>Content & email marketing</li>
           </ul>
-          <span class="services-cta mt-auto">View Details</span>
+          <span class="services-cta mt-auto">Digital Marketing</span>
         </a>
       </div>
 
@@ -224,12 +304,11 @@
     <div class="faq-accordion">
       <div class="faq-item">
         <button class="faq-question">
-          <span>How much does a website cost?</span>
+          <span>How much does a basic business website cost in North Wales?</span>
           <i class="faq-icon bi bi-plus-lg"></i>
         </button>
         <div class="faq-answer">
-          Every project is custom-quoted. Starter websites begin around <strong>£850</strong>, while fully-featured e-commerce builds start at <strong>£2,500</strong>. After a discovery call we’ll send a transparent, fixed-price proposal.
-        </div>
+          Our North Wales web-design packages start at £250 one-off (or £20 per month) with responsive design, SEO-friendly page, perfect for local companies in Bangor, Caernarfon and Anglesey.        </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
@@ -299,53 +378,49 @@
 
 
 
-  <!-- FOOTER (global include) -->
-  <footer class="cduk-footer">
-    <div class="footer-inner">
-      <div class="f-col brand">
-        <div class="brand-row">
-          <img src="CDUK logo.png" alt="Clean Design UK"/>
-          <span class="brand-name">Clean Design UK</span>
-        </div>
-        <p>
-          Welsh web-design & digital-marketing studio crafting fast,
-          conversion-focused websites and data-driven campaigns for small
-          businesses across the UK.
-        </p>
+    <!-- FOOTER -->
+<footer class="cduk-footer">
+  <div class="footer-inner">
+    <div class="f-col brand">
+      <div class="brand-row">
+        <img src="CDUK logo.png" alt="Clean Design UK">
+        <span class="brand-name">Clean Design UK</span>
       </div>
-      <div class="f-col">
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Policies</h5>
-        <ul>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Follow Us</h5>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-tiktok"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-google"></i></a>
-        </div>
+      <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Policies</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/cleandesign_uk"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/CleanDesignUK"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/clean-design-uk"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@clean.design.uk"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.youtube.com/@CleanDesignUK"><i class="bi bi-youtube"></i></a>
+        <a href="https://g.co/kgs/4E5qzB7"><i class="bi bi-google"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Clean Design UK — Web Design & Marketing
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Clean Design UK — Web Design & Marketing
+  </div>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

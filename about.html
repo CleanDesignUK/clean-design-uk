@@ -3,7 +3,47 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>About Us — Clean Design UK</title>
+ <!-- Primary SEO -->
+  <title>About Our Bangor Web-Design Agency | Clean Design UK – North-Wales</title>
+  <meta name="description"
+        content="Clean Design UK is a Bangor-Anglesey web-design & digital-marketing studio that crafts SEO-friendly websites, e-commerce stores and branding for SMEs in North Wales, Chester & Liverpool. Discover our story, values and why 50+ businesses trust us.">
+  <link rel="canonical" href="https://cleandesignuk.com/about">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Meet Clean Design UK – Your North-Wales Web-Design Partner">
+  <meta property="og:description" content="Learn how our Bangor-based team blends creativity, collaboration & SEO expertise to grow small businesses across Anglesey, Caernarfon & beyond.">
+  <meta property="og:url"         content="https://cleandesignuk.com/about">
+  <meta property="og:image"       content="https://cleandesignuk.com/assets/og-about.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- AboutPage / LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type"  :"AboutPage",
+    "name"   :"About Clean Design UK – Web-Design & SEO Agency",
+    "description":"North-Wales web-design, e-commerce and digital-marketing studio helping SMEs grow online.",
+    "url"    :"https://cleandesignuk.com/about",
+    "publisher":{
+      "@type":"ProfessionalService",
+      "name":"Clean Design UK",
+      "url":"https://cleandesignuk.com",
+      "telephone":"+447367292269",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"4 Ffordd Cerrig Mawr",
+        "addressLocality":"Caergeiliog",
+        "addressRegion":"Anglesey",
+        "postalCode":"LL65 3LU",
+        "addressCountry":"GB"
+      },
+      "areaServed":[
+        "Bangor","Anglesey","Caernarfon","Holyhead","Conwy","Llandudno","North Wales"
+      ]
+    }
+  }
+  </script>
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -17,26 +57,63 @@
   <!-- GLOBAL & PAGE STYLES -->
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="about.css"/>
+
+<!-- Calendly badge widget begin -->
+<link  href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  window.addEventListener('load', function () {
+    Calendly.initBadgeWidget({
+      url:  'https://calendly.com/jesse-cleandesignuk/30min',
+      text: 'Free Consultation + 30 Days Hosting',
+      color: '#6c181c',
+      textColor: '#ffffff'
+    });
+  });
+</script>
+<!-- Calendly badge widget end -->
+
+<!-- FAVICONS -->
+<link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
+<link rel="icon"       type="image/png" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
+<link rel="icon"       type="image/svg+xml"           href="CDUK small logo 50x50.jpg">    <!-- optional modern -->
+<link rel="apple-touch-icon"             sizes="180x180" href="CDUK small logo 50x50.jpg">
+<meta name="msapplication-TileImage"     content="mstile-150.png">
+<meta name="msapplication-TileColor"     content="#6c181c">
+
+
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="CDUK small logo.webp" alt="Logo" width="80" height="80" class="me-2"/>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="cduk-logo-80.png" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <i class="bi bi-list fs-2"></i>
       </button>
+
       <div id="navMenu" class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+            <li><a class="dropdown-item" href="wesite-design.html">Website Design</a></li>
+            <li><a class="dropdown-item" href="ecommerce.html">E-commerce</a></li>
+            <li><a class="dropdown-item" href="branding.html">Business Branding</a></li>
+            <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
+          </ul>
+        </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -53,8 +130,7 @@
           Your Partner for Professional Web Design in North Wales
         </h1>
         <p class="lead mb-4">
-          We create bespoke websites and digital solutions that help small businesses thrive online.
-        </p>
+          Based in North Wales, Clean Design UK builds fast, mobile-first websites, SEO-optimised e-commerce stores and memorable brands that help small businesses win online.        </p>
         <a href="contact.html" class="services-cta">Get a Free Consultation</a>
       </div>
     </section>
@@ -92,7 +168,7 @@
           <div class="box-num">2.</div>
           <h5 class="box-title">Collaboration</h5>
           <p class="box-desc">
-            We work hand-in-hand with you at every stage—listening, iterating, and delivering solutions that truly resonate with your vision.
+            We work hand-in-hand with you at every stage, listening, iterating, and delivering solutions that truly resonate with your vision.
           </p>
         </div>
       </div>
@@ -102,7 +178,7 @@
           <div class="box-num">3.</div>
           <h5 class="box-title">Authenticity</h5>
           <p class="box-desc">
-            Honesty and transparency guide everything we do—no hidden fees, no black-box processes, just open communication.
+            Honesty and transparency guide everything we do, no hidden fees, no black-box processes, just open communication.
           </p>
         </div>
       </div>
@@ -124,10 +200,9 @@
 
 <section class="partners-section py-5 text-center">
   <div class="container">
-    <h2 class="section-title mb-3">Trusted by 50+ Small Businesses Worldwide</h2>
+    <h2 class="section-title mb-3">Trusted by 50+ Small Businesses in North Wales and Worldwide</h2>
     <p class="partners-description mb-5">
-      From Cardiff startups to London boutiques, UK SMEs to global e-commerce brands in North America and Asia, Clean Design UK has delivered bespoke web design, SEO optimization, branding and digital marketing solutions that drive real growth and engagement.
-    </p>
+        From Cardiff start-ups and Bangor cafés to e-commerce stores in the USA and Asia, Clean Design UK has delivered bespoke websites, SEO audits and branding projects that drive measurable growth and engagement.    </p>
     <div class="row justify-content-center align-items-center g-4">
       <div class="col-6 col-sm-4 col-md-2">
         <img src="matt-ward-ppm-logo-white.jpg" alt="Matt Ward Plastering & Property Maintenance logo" class="partner-logo">
@@ -154,53 +229,49 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="cduk-footer">
-    <div class="footer-inner">
-      <div class="f-col brand">
-        <div class="brand-row">
-          <img src="CDUK logo.png" alt="Clean Design UK"/>
-          <span class="brand-name">Clean Design UK</span>
-        </div>
-        <p>
-          Welsh web-design & digital-marketing studio crafting fast,
-          conversion-focused websites and data-driven campaigns for small
-          businesses across the UK.
-        </p>
+    <!-- FOOTER -->
+<footer class="cduk-footer">
+  <div class="footer-inner">
+    <div class="f-col brand">
+      <div class="brand-row">
+        <img src="CDUK logo.png" alt="Clean Design UK">
+        <span class="brand-name">Clean Design UK</span>
       </div>
-      <div class="f-col">
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Policies</h5>
-        <ul>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Follow Us</h5>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-tiktok"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-google"></i></a>
-        </div>
+      <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Policies</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/cleandesign_uk"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/CleanDesignUK"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/clean-design-uk"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@clean.design.uk"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.youtube.com/@CleanDesignUK"><i class="bi bi-youtube"></i></a>
+        <a href="https://g.co/kgs/4E5qzB7"><i class="bi bi-google"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Clean Design UK — Web Design & Marketing
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Clean Design UK — Web Design & Marketing
+  </div>
+</footer>
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

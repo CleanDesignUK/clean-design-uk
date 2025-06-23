@@ -1,0 +1,13 @@
+/* simple dark gradient hero */
+.legal-hero{
+  background:linear-gradient(135deg,#49090e 0%,#171717 100%);
+  height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.legal-content h2{margin-top:2.5rem;font-size:1.4rem}
+.legal-content ul{padding-left:1.25rem}
+.legal-content ul li{margin-bottom:.5rem}

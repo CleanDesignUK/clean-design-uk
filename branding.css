@@ -1,0 +1,67 @@
+/* =========  BRANDING PAGE  ========= */
+
+/* one parallax background for hero + cards */
+.bb-shared-bg{
+  background:url(services-bg-3.jpg) center/cover no-repeat fixed;
+  position:relative;
+}
+
+
+/* ---------- HERO ---------- */
+.bb-hero{
+  height:60vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:8rem 1rem 2rem;color:#fff;position:relative;
+}
+.bb-hero__content{z-index:1;max-width:740px}
+
+/* ---------- PACKAGES ---------- */
+.bb-packages-section{position:relative;padding:4rem 0}
+.bb-packages-content{position:relative;z-index:1}
+
+.bb-packages-section{
+    padding-bottom: 8rem;
+}
+
+/* toggle pill (same at all breakpoints) */
+.pricing-toggle-container{text-align:center;margin-bottom:2rem}
+.pricing-toggle{
+  display:inline-flex;gap:2px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.6);
+  border-radius:50px;padding:3px
+}
+.toggle-btn{
+  border:0;background:transparent;border-radius:50px;padding:.5rem 1.75rem;
+  font-family:var(--ff-sub);color:rgba(255,255,255,.8);cursor:pointer;
+  transition:.2s
+}
+.toggle-btn:hover{color:#fff}
+.toggle-btn.active{background:var(--clr-primary);color:#fff}
+
+/* price switch */
+.bb-packages-content.mode-oneoff  .package-price::after{content:attr(data-one-off)" one-off"}
+.bb-packages-content.mode-monthly .package-price::after{content:attr(data-monthly)" /month"}
+
+/* ---------- CARD ---------- */
+.bb-card{
+  background:transparent;border:1px solid rgba(255,255,255,.6);border-radius:.75rem;
+  color:#fff;display:flex;flex-direction:column;padding:1.5rem;
+  transition:background .3s,border-color .3s,color .3s
+}
+.bb-card:hover{background:#fff;border-color:#fff;color:#222}
+.bb-card-title{font-family:var(--ff-sub);font-size:1.25rem;margin-bottom:1rem}
+.bb-card-price{font-family:var(--ff-title);font-size:1.5rem;font-weight:600}
+.bb-card-features{flex-grow:1;margin:1rem 0 1.5rem;padding:0}
+.bb-card-features li{position:relative;padding-left:1.5rem;margin-bottom:.5rem}
+.bb-card-features i{color:var(--clr-primary);position:absolute;left:0;top:.1rem}
+.bb-select-btn{
+  background:var(--clr-primary);color:#fff;border-radius:50px;
+  padding:.75rem 2rem;font-family:var(--ff-sub);
+  transition:background .2s,transform .2s;text-decoration:none
+}
+.bb-select-btn:hover{background:var(--clr-sec-1);transform:translateY(-2px)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:991.98px){
+  .bb-hero{height:auto;padding:8rem 1rem 4rem}
+  .bb-packages-section{padding:3rem 0}
+}

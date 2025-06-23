@@ -169,24 +169,44 @@
   transform: translateY(-2px);
 }
 
+
 /*──────────────────────────────────────────
   RESPONSIVE
 ──────────────────────────────────────────*/
+
+/* Tablets and down (≤ 991 px) */
 @media (max-width: 991.98px) {
   .wd-hero {
-    height: auto;
-    padding: 8rem 1rem 4rem;
+    height: auto;                 /* let content decide height */
+    padding: 7rem 1rem 3rem;      /* a bit more breathing-room */
   }
-  .wd-packages-content {
-    padding: 3rem 0;
+  .wd-packages-content { padding: 3rem 0; }
+}
+
+/* Phones (≤ 575 px) */
+@media (max-width: 575.98px) {
+  .wd-hero h1   { font-size: 1.85rem; line-height: 1.25; }
+  .wd-hero .lead{ font-size: 1rem;   }
+  .pricing-toggle {                       /* keep pill readable */
+    gap: 1px;
+    padding: 2px;
   }
 }
 
-/*──────────────────────────────────────────
-  RESPONSIVE
-──────────────────────────────────────────*/
-@media (max-width: 991.98px) {
-  .wd-hero { height: 50vh; }
-  .pricing-toggle { margin-bottom: 2rem; }
-}
+/* Phones (≤ 575 px)  ─────────────────────────────── */
+@media (max-width: 575.98px) {
 
+  /* …existing hero font-size overrides… */
+
+  /* put some side-gutters on each card */
+  .wd-packages-content .row > [class*="col-"] {
+    padding-left: 0.75rem;   /* 12 px */
+    padding-right: 0.75rem;
+  }
+
+  /* if you want the card itself to keep the extra padding when hovered */
+   .wd-card {
+    margin-left: .75rem;   /* ≈ 12 px */
+    margin-right: .75rem;
+  }
+}

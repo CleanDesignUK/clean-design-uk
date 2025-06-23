@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case Studies — Clean Design UK</title>
+  <!-- Primary SEO -->
+  <title>Website-Design Portfolio North Wales | Case-Studies | Clean Design UK</title>
+  <meta name="description"
+        content="Browse 30+ responsive websites, e-commerce stores and brand make-overs built by Clean Design UK for businesses in Bangor, Caernarfon, Anglesey and across the UK. See real-world web-design & SEO results inside our project gallery.">
+  <link rel="canonical" href="https://cleandesignuk.com/gallery">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="North Wales Web-Design Portfolio | Clean Design UK">
+  <meta property="og:description" content="Explore case studies of SEO-optimised, mobile-first websites we’ve delivered for SMEs throughout North Wales and the wider UK.">
+  <meta property="og:url"         content="https://cleandesignuk.com/gallery">
+  <meta property="og:image"       content="https://cleandesignuk.com/assets/og-gallery.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!--  Local Business schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type"  :"CollectionPage",
+    "name"   :"Clean Design UK – Website Design Portfolio",
+    "description":"Portfolio of responsive websites, logos and e-commerce builds created by Clean Design UK in Bangor, North Wales.",
+    "url"    :"https://cleandesignuk.com/gallery",
+    "provider":{"@type":"WebSite","name":"Clean Design UK","url":"https://cleandesignuk.com"}
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -27,27 +51,64 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Gallery overrides -->
   <link rel="stylesheet" href="gallery.css" />
+
+<!-- Calendly badge widget begin -->
+<link  href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  window.addEventListener('load', function () {
+    Calendly.initBadgeWidget({
+      url:  'https://calendly.com/jesse-cleandesignuk/30min',
+      text: 'Free Consultation + 30 Days Hosting',
+      color: '#6c181c',
+      textColor: '#ffffff'
+    });
+  });
+</script>
+<!-- Calendly badge widget end -->
+
+<!-- FAVICONS -->
+<link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
+<link rel="icon"       type="image/png" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
+<link rel="icon"       type="image/svg+xml"           href="CDUK small logo 50x50.jpg">    <!-- optional modern -->
+<link rel="apple-touch-icon"             sizes="180x180" href="CDUK small logo 50x50.jpg">
+<meta name="msapplication-TileImage"     content="mstile-150.png">
+<meta name="msapplication-TileColor"     content="#6c181c">
+
+
 </head>
 <body>
 
   <!-- NAVBAR (global include) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="CDUK small logo.webp" alt="Clean Design UK logo" width="80" height="80" class="me-2"/>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="cduk-logo-80.png" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <i class="bi bi-list fs-2"></i>
       </button>
+
       <div id="navMenu" class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav gap-lg-3 mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Case Studies</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+            <li><a class="dropdown-item" href="wesite-design.html">Website Design</a></li>
+            <li><a class="dropdown-item" href="ecommerce.html">E-commerce</a></li>
+            <li><a class="dropdown-item" href="branding.html">Business Branding</a></li>
+            <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
+          </ul>
+        </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -59,12 +120,11 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold mb-0">Our Project Gallery</h1>
+          <h1 class="display-5 fw-bold mb-0">Our Web-Design & Digital Marketing Projects</h1>
         </div>
         <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
           <p class="lead mb-0">
-            From holistic coaching experiences to premium cable-protection ecommerce, explore a curated selection of our latest work—and see how we help UK small businesses stand out online.
-          </p>
+          From Bangor therapists and Anglesey trades to nationwide e-commerce brands, this gallery showcases more than 30 North-Wales & UK small-business websites we’ve crafted. Every project features fast, mobile-first design, on-page SEO and conversion-ready UX, proof that smart web design turns clicks into customers.          </p>
         </div>
       </div>
     </div>
@@ -77,14 +137,19 @@
 
         <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="http://thesacredsoulacademy.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor.png" alt="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+              <img src="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor.jpg" alt="the-sacred-soul-academy-coaching-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
               <h3 class="card-title">The Sacred Soul Academy & Coaching</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                A responsive site that highlights Reiki, crystal healing, coaching and meditation services, with an organised layout and simple contact-and-booking form.
               </p>
               <div class="card-tags mt-auto">
                 <span class="badge">Website Design</span>
@@ -92,19 +157,24 @@
                 <span class="badge">UI/UX</span>
               </div>
             </div>
-          </div>
+           </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://mattwardpropertymaintenance.co.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor.png" alt="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+              <img src="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor.jpg" alt="matt-ward-property-maintenance-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
               <h3 class="card-title">Matt Ward Plastering & Property Maintenance</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A fully responsive, luxury website that showcases comprehensive property-maintenance and expert plastering services, paired with an intuitive consultation form.
               </p>
               <div class="card-tags mt-auto">
                 <span class="badge">Website Design</span>
@@ -112,19 +182,24 @@
                 <span class="badge">UI/UX</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="http://glowcableguard.co.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="glow-cable-guard-professional-web-designer-north-wales-bangor.jpg" alt="glow-cable-guard-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top">
+              <img src="glow-cable-guard-professional-web-designer-north-wales-bangor.jpg" alt="glow-cable-guard-professional-web-designer-north-wales-bangor" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
               <h3 class="card-title">Glow Cable Guard</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+              A sleek new logo and user-friendly e-commerce store featuring clear product pages, intuitive checkout and trust-building customer reviews for its cable-protection range.
               </p>
               <div class="card-tags mt-auto">
                 <span class="badge">E-commerce design</span>
@@ -132,361 +207,523 @@
                 <span class="badge">Logo design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://morrispropertyfirm.co.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="Morris Property Firm-professional-web-designer-north-wales-bangor.jpg" alt="Morris Property Firm Website" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">Morris Property Firm</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                A professional logo and user-friendly site with detailed listings, intuitive search and clear calls to action, giving clients a seamless property-exploration experience.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">Website Design</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">UI/UX</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://softtouchcarpets.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="Soft Touch Carpets-professional-web-designer-north-wales-bangor.jpg" alt="Soft Touch Carpets & Elegant Edges project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Soft Touch Carpets & Elegant Edges</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A classic, inviting website where visitors can explore a refined carpet collection, bespoke edging services and inspiring customer stories with ease.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
-                <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO</span>
+                <span class="badge">UI/UX</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://hughhelps.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="hugh helps-professional-web-designer-north-wales-bangor.jpg" alt="Hugh Helps project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">Hugh Helps</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+                A clean, welcoming site that makes it easy to find therapy, counselling and hypnotherapy support, reinforced by genuine client success stories.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO optimisation</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://websitedesignercheap.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="cheap website UK-professional-web-designer-north-wales-bangor (2).jpg" alt="Cheap Website UK project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">Cheap Website UK</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                A straightforward platform that clearly presents affordable web-design packages and pricing, reflecting a commitment to quality at low cost.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">UI/UX</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Affordable Website Design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://niasingingmamas.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="niasingingmamas-professional-web-designer-north-wales-bangor.jpg" alt="Nia Singing Mamas project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Nia Singing Mamas</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A warm, modern redesign that improves navigation and showcases events and resources for a music-centred community.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
-                <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">UI/UX</span>
+                <span class="badge">Website Redesign</span>
+                <span class="badge">SEO Optimisation</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="http://petitebites.shop/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="petitebites-professional-web-designer-north-wales-bangor.jpg" alt="Petite Bites project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">Petite Bites</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+                A simple, functional online shop displaying brownies, cookies, cheesecake and chocolate balls with clear visuals and an easy ordering process.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Affordable Website Design</span>
+                <span class="badge">SEO Optimisation</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://northwalestutoring.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="northwalestutoring-professional-web-designer-north-wales-bangor.jpg" alt="North Wales Tutoring project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">North Wales Tutoring</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                A modern logo and clean website that highlight maths, physics and coding tutoring, complete with testimonials and a quick booking form.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">UI/UX</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Website Design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://eveleenpowercounselling.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="eveleen power counselling-professional-web-designer-north-wales-bangor.jpg" alt="Eveleen Power Counselling project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Eveleen Power Counselling</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A soothing, user-friendly site and warm logo that together convey compassionate, client-focused mental-health support.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">UI/UX</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Affordable Website Design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://baliadventure.net/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="bali adventure-professional-web-designer-north-wales-bangor.jpg" alt="BaliAdventure project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">BaliAdventure</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+                A vibrant, immersive travel website that presents thrilling activities, breathtaking destinations and essential information for planning a dream Bali escape.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Affordable Website Design</span>
+                <span class="badge">Branding</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://wellbeingexpression.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="wellbeing expression-professional-web-designer-north-wales-bangor.jpg" alt="Wellbeing Expressions project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">Wellbeing Expressions</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                An inviting website and thoughtful logo highlight mental-health support and wellness workshops, featuring testimonials and an easy booking flow that shows Wellbeing Expressions’ commitment to promoting well-being.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">UI/UX</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Website Design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://websitedesignanglesey.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="webistedesignanglesey-professional-web-designer-north-wales-bangor.jpg" alt="Website Design Anglesey project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Website Design Anglesey</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A seamless website for our sister brand lets clients browse high-quality, tailored web-design and digital-marketing services, request quotes and book with ease.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">UI/UX</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Website Design</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://shininglightpsychicmedium.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="shininglightpsychicmedium-professional-web-designer-north-wales-bangor.jpg" alt="Shining Light Psychic Medium project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">Shining Light Psychic Medium</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
-              </p>
+                A service-based website offers a seamless experience for intuitive readings and energy healing, with contact options for enquiries or session bookings.              </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO Optimisation</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://colettewebbsingingtutoring.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="colettewebb-professional-web-designer-north-wales-bangor.jpg" alt="Colette Webb Singing Tutoring project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">Colette Webb Singing Tutoring</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                A lively site and new logo display children’s and adults’ singing lessons, include positive reviews and make booking sessions effortless.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">Website Design</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">SEO Optimisation</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://leighplasterers.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="leighplasterers-web-design-by-web-designer-north-wales-bangor.jpg" alt="Leigh Plasterers project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Leigh Plasterers</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A sleek, modern site with project gallery, testimonials and detailed service info reflects Leigh Plasterers’ professional image and dedication to quality craftsmanship.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">Website Design</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Digital Marketing</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="http://talkwithsian.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="talkwithsian-web-design-by-web-designer-north-wales-bangor.jpg" alt="Talk with Sian project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">Talk with Sian</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+                A calm, welcoming website for tailored women’s therapy, including walk-and-talk sessions, features an easy booking system and thoughtful mental-health content.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Website Design</span>
+                <span class="badge">Branding</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
                 <!-- Project 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://www.bornfreelimerencecoaching.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="firefly-screenshot.jpg" alt="FireFly project" class="img-fluid w-100 rounded-top">
+              <img src="born-free-limerence-coaching-web-design-by-web-designer-north-wales-bangor.jpg" alt="Born Free Limerence Coaching project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">FireFly</h3>
+              <h3 class="card-title">Born Free Limerence Coaching</h3>
               <p class="card-text">
-                From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+                The new site provides a clear, supportive space to learn about coaching, read success stories and start healing from limerence.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
-                <span class="badge">Branding</span>
+                <span class="badge">Affordable Website Redesign</span>
+                <span class="badge">SEO Optimisation</span>
                 <span class="badge">Motion</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://crosiocymraes.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="prola-screenshot.jpg" alt="Prola project" class="img-fluid w-100 rounded-top">
+              <img src="crosio-cymraes-web-design-by-web-designer-north-wales-bangor.jpg" alt="Crosio Cymraes project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Prola</h3>
+              <h3 class="card-title">Crosio Cymraes</h3>
               <p class="card-text">
-                We provide professional tiling—from kitchens to bathrooms, floors to walls—ensuring a precise and durable finish.
+                A bilingual English/Welsh shop showcases crochet creations with smooth shopping, detailed product descriptions and a gallery of handmade pieces.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">UI.UX</span>
+                <span class="badge">E-commerce</span>
                 <span class="badge">Branding</span>
-                <span class="badge">Motion</span>
+                <span class="badge">Payment Integration</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Project 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="gallery-card h-100 d-flex flex-column">
+            <a
+              href="https://sandartsandcrafts.co.uk/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
             <div class="card-img">
-              <img src="third-project.jpg" alt="Third project" class="img-fluid w-100 rounded-top">
+              <img src="SandArtsandCrafts-web-designer-north-wales-bangor.jpg" alt="Sand Arts and Crafts project" class="img-fluid w-100 rounded-top" loading="lazy">
             </div>
             <div class="card-body flex-grow-1 p-4">
-              <h3 class="card-title">Third Project</h3>
+              <h3 class="card-title">Sand Arts and Crafts</h3>
               <p class="card-text">
-                Interior, exterior, single rooms or entire properties—we handle it all to deliver a fresh, high-quality result.
+                The site promotes engaging workshops and events that inspire imagination with a variety of sand-art projects and crafts for all ages.
               </p>
               <div class="card-tags mt-auto">
-                <span class="badge">Painting</span>
-                <span class="badge">Decorating</span>
+                <span class="badge">Website Redesign</span>
+                <span class="badge">Branding</span>
+                <span class="badge">GoHighLevel</span>
               </div>
             </div>
-          </div>
+          </a>
+        </div>
+                        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a
+              href="https://allt-fit.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
+            <div class="card-img">
+              <img src="allt-fit.jpg" alt="Allt_Fit project" class="img-fluid w-100 rounded-top" loading="lazy">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Allt_Fit</h3>
+              <p class="card-text">
+                Allt_Fit’s new site helps people get fit through personal training, sports massage and rehab therapy, with easy contact and service exploration.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO Optimisation</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a
+              href="https://www.baramafropopupkitchen.com/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
+            <div class="card-img">
+              <img src="baram-website.jpg" alt="Baram Afro Pop-Up Kitchen project" class="img-fluid w-100 rounded-top" loading="lazy">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Baram Afro Pop-Up Kitchen</h3>
+              <p class="card-text">
+                A brand-refreshed website and online store launched 16 April 2024, letting customers conveniently buy vibrant Afro-inspired cuisine.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">E-commerce</span>
+                <span class="badge">SEO Optimisation</span>
+                <span class="badge">Payment Integration</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <a
+              href="https://jackwilloughby.org/"
+              target="_blank"
+              rel="noopener"
+              class="gallery-card h-100 d-flex flex-column text-decoration-none"
+            >
+            <div class="card-img">
+              <img src="jackwilloughby-website.jpg" alt="Jack Willoughby project" class="img-fluid w-100 rounded-top" loading="lazy">
+            </div>
+            <div class="card-body flex-grow-1 p-4">
+              <h3 class="card-title">Jack Willoughby</h3>
+              <p class="card-text">
+                	Jack’s new website acts as his digital basecamp, showcasing his work as an outdoor educator, researcher, photographer and explorer.
+              </p>
+              <div class="card-tags mt-auto">
+                <span class="badge">Website Design</span>
+                <span class="badge">SEO Optimisation</span>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
@@ -589,50 +826,49 @@
   </div>
 </section>
 
-  <!-- FOOTER (global include) -->
-  <footer class="cduk-footer">
-    <div class="footer-inner">
-      <div class="f-col brand">
-        <div class="brand-row">
-          <img src="CDUK logo.png" alt="Clean Design UK logo">
-          <span class="brand-name">Clean Design UK</span>
-        </div>
-        <p>
-          Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.
-        </p>
+    <!-- FOOTER -->
+<footer class="cduk-footer">
+  <div class="footer-inner">
+    <div class="f-col brand">
+      <div class="brand-row">
+        <img src="CDUK logo.png" alt="Clean Design UK">
+        <span class="brand-name">Clean Design UK</span>
       </div>
-      <div class="f-col">
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">Case Studies</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Follow Us</h5>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-envelope-fill"></i></a>
-        </div>
-      </div>
-      <div class="f-col">
-        <h5>Policies</h5>
-        <ul>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-        </ul>
+      <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Policies</h5>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/cleandesign_uk"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/CleanDesignUK"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/clean-design-uk"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@clean.design.uk"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.youtube.com/@CleanDesignUK"><i class="bi bi-youtube"></i></a>
+        <a href="https://g.co/kgs/4E5qzB7"><i class="bi bi-google"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Clean Design UK — Web Design & Marketing
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Clean Design UK — Web Design & Marketing
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
