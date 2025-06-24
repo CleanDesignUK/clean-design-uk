@@ -1,0 +1,7 @@
+# robots.txt for https://cleandesignuk.com
+# Generated on 2025-06-24
+
+User-agent: *
+Disallow:
+
+Sitemap: https://cleandesignuk.com/sitemap.xml
