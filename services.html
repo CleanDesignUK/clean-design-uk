@@ -70,6 +70,9 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Page-specific overrides -->
   <link rel="stylesheet" href="services.css" />
+      <link rel="stylesheet" href="cookie.css">
+
+  <script defer src="cookie.js"></script>
 
 <!-- Calendly badge widget begin -->
 <link  href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -97,6 +100,20 @@
 
 </head>
 <body>
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-banner__content">
+    <p>
+      We use cookies to ensure you get the best experience on our site. 
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <div class="cookie-banner__actions">
+      <button id="cookie-accept" class="btn-cookie btn-accept">Accept</button>
+      <button id="cookie-decline" class="btn-cookie btn-decline">Decline</button>
+    </div>
+  </div>
+  <button id="cookie-close" class="cookie-banner__close">&times;</button>
+</div>
 
   <!-- NAVBAR (global include) -->
   <!-- NAVBAR -->
@@ -238,7 +255,7 @@
       <!-- Summary card -->
       <div class="t-box t-summary">
         <div class="t-summary__brand">
-          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <img src="CDUK logo.jpg" alt="Clean Design UK logo">
           <span>Clean Design UK</span>
         </div>
         <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
@@ -383,7 +400,7 @@
   <div class="footer-inner">
     <div class="f-col brand">
       <div class="brand-row">
-        <img src="CDUK logo.png" alt="Clean Design UK">
+        <img src="CDUK logo.jpg" alt="Clean Design UK">
         <span class="brand-name">Clean Design UK</span>
       </div>
       <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
@@ -437,6 +454,7 @@
     });
   });
 </script>
-  
+
+
 </body>
 </html>

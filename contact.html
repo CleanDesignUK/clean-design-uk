@@ -64,6 +64,9 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Contact-page styles -->
   <link rel="stylesheet" href="contact.css" />
+      <link rel="stylesheet" href="cookie.css">
+
+        <script defer src="cookie.js"></script>
 
 <!-- FAVICONS -->
 <link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
@@ -76,6 +79,20 @@
 
 </head>
 <body>
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-banner__content">
+    <p>
+      We use cookies to ensure you get the best experience on our site. 
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <div class="cookie-banner__actions">
+      <button id="cookie-accept" class="btn-cookie btn-accept">Accept</button>
+      <button id="cookie-decline" class="btn-cookie btn-decline">Decline</button>
+    </div>
+  </div>
+  <button id="cookie-close" class="cookie-banner__close">&times;</button>
+</div>
 
   <!-- NAVBAR (logo at 80×80) -->
   <!-- NAVBAR -->
@@ -249,7 +266,7 @@
       <!-- Summary card -->
       <div class="t-box t-summary">
         <div class="t-summary__brand">
-          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <img src="CDUK logo.jpg" alt="Clean Design UK logo">
           <span>Clean Design UK</span>
         </div>
         <h3 class="t-summary__heading">Trusted by 50+ Happy Clients</h3>
@@ -315,12 +332,11 @@
     <div class="faq-accordion">
       <div class="faq-item">
         <button class="faq-question">
-          <span>How much does a website cost?</span>
+          <span>How much does a basic business website cost in North Wales?</span>
           <i class="faq-icon bi bi-plus-lg"></i>
         </button>
         <div class="faq-answer">
-          Every project is custom-quoted. Starter websites begin around <strong>£850</strong>, while fully-featured e-commerce builds start at <strong>£2,500</strong>. After a discovery call we’ll send a transparent, fixed-price proposal.
-        </div>
+            Our North Wales web-design packages start at £250 one-off (or £20 per month) with responsive design, SEO-friendly page, perfect for local companies in Bangor, Caernarfon and Anglesey.        </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
@@ -367,7 +383,7 @@
   <div class="footer-inner">
     <div class="f-col brand">
       <div class="brand-row">
-        <img src="CDUK logo.png" alt="Clean Design UK">
+        <img src="CDUK logo.jpg" alt="Clean Design UK">
         <span class="brand-name">Clean Design UK</span>
       </div>
       <p>Welsh web-design & digital-marketing studio crafting fast, conversion-focused websites and data-driven campaigns for small businesses across the UK.</p>
@@ -414,8 +430,21 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
+  // FAQ toggle script
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      const icon = btn.querySelector('.faq-icon');
+      icon.classList.toggle('bi-plus-lg', !open);
+      icon.classList.toggle('bi-dash-lg', open);
+    });
+  });
+</script>
+
+<script>
   const BLOCKED_KEYWORDS = [
-    'backlink','google top','we offer backlink','rank','seo fix'
+    'backlink','google top','we offer backlink','rank','seo fix', 'hello friend', 'grow your business', 'growing your business', 'rank your website', 'help you'
   ];
 
   function validateContactForm(form) {

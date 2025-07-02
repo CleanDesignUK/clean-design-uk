@@ -85,32 +85,27 @@
   <!-- GLOBAL & PAGE STYLES -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cookie.css">
+
+      <script defer src="cookie.js"></script>
+
+
 
 <!-- Calendly badge widget begin -->
-<button id="calendly-launch" class="cta-btn">
-  Free Consultation&nbsp;+
-  <small>30-Day Hosting</small>
-</button>
-
+<link  href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-document.getElementById('calendly-launch').addEventListener('click', () => {
-  if (window.Calendly) { Calendly.showPopupWidget('https://calendly.com/…'); return; }
-
-  /* 1. Load JS */
-  const js = document.createElement('script');
-  js.src = 'https://assets.calendly.com/assets/external/widget.js';
-  js.onload = () =>
-    Calendly.showPopupWidget('https://calendly.com/jesse-cleandesignuk/30min');
-  document.head.append(js);
-
-  /* 2. Load CSS */
-  const css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = 'https://assets.calendly.com/assets/external/widget.css';
-  document.head.append(css);
-});
+  window.addEventListener('load', function () {
+    Calendly.initBadgeWidget({
+      url:  'https://calendly.com/jesse-cleandesignuk/30min',
+      text: 'Free Consultation + 30 Days Hosting',
+      color: '#6c181c',
+      textColor: '#ffffff'
+    });
+  });
 </script>
 <!-- Calendly badge widget end -->
+
   
 <!-- FAVICONS -->
 <link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
@@ -430,7 +425,7 @@ document.getElementById('calendly-launch').addEventListener('click', () => {
       <!-- Summary card -->
       <div class="t-box t-summary">
         <div class="t-summary__brand">
-          <img src="CDUK logo.png" alt="Clean Design UK logo">
+          <img src="CDUK logo.jpg" alt="Clean Design UK logo">
           <span>Clean Design UK</span>
         </div>
         <h3 class="t-summary__heading">Trusted by 50+ Happy Small Businesses</h3>
@@ -671,17 +666,12 @@ document.getElementById('calendly-launch').addEventListener('click', () => {
   });
 </script>
 
-<script>
-  document.querySelectorAll('#cookie-accept, #cookie-decline, #cookie-close')
-    .forEach(btn => btn.addEventListener('click', () => {
-      document.getElementById('cookie-banner').style.display = 'none';
-    }));
-</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   const BLOCKED_KEYWORDS = [
-    'backlink','google top','we offer backlink','rank','seo fix'
+    'backlink','google top','we offer backlink','rank','seo fix', 'hello friend', 'grow your business', 'growing your business', 'rank your website', 'help you'
   ];
 
   function validateFields(form) {
