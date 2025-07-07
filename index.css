@@ -657,3 +657,8 @@
   .hero-features{flex-direction:column;gap:1rem}
 }
 
+@media (max-width: 768px) {
+   .calendly-badge-widget {
+    bottom: 12rem !important;      /* adjust “5rem” to roughly your banner’s height */
+  }
+}
