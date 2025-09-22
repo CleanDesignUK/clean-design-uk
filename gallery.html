@@ -7,26 +7,30 @@
   <title>Website-Design Portfolio North Wales | Case-Studies | Clean Design UK</title>
   <meta name="description"
         content="Browse 30+ responsive websites, e-commerce stores and brand make-overs built by Clean Design UK for businesses in Bangor, Caernarfon, Anglesey and across the UK. See real-world web-design & SEO results inside our project gallery.">
-  <link rel="canonical" href="https://cleandesignuk.com/gallery">
+  <link rel="canonical" href="https://cleandesignuk.com/gallery.html">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="North Wales Web-Design Portfolio | Clean Design UK">
   <meta property="og:description" content="Explore case studies of SEO-optimised, mobile-first websites we’ve delivered for SMEs throughout North Wales and the wider UK.">
-  <meta property="og:url"         content="https://cleandesignuk.com/gallery">
+  <meta property="og:url"         content="https://cleandesignuk.com/gallery.html">
   <meta property="og:image"       content="https://cleandesignuk.com/assets/og-gallery.jpg">
   <meta name="twitter:card"       content="summary_large_image">
+        <meta property="og:site_name" content="Clean Design UK">
+
 
   <!--  Local Business schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type"  :"CollectionPage",
-    "name"   :"Clean Design UK – Website Design Portfolio",
-    "description":"Portfolio of responsive websites, logos and e-commerce builds created by Clean Design UK in Bangor, North Wales.",
-    "url"    :"https://cleandesignuk.com/gallery",
-    "provider":{"@type":"WebSite","name":"Clean Design UK","url":"https://cleandesignuk.com"}
-  }
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Clean Design UK – Website Design Portfolio",
+  "description":"Portfolio of responsive websites, logos and e-commerce builds created by Clean Design UK in Bangor, North Wales.",
+  "url":"https://cleandesignuk.com/gallery.html",
+  "isPartOf":{"@type":"WebSite","name":"Clean Design UK","url":"https://cleandesignuk.com"}
+}
+</script>
+
   </script>
 
   <!-- Google Fonts -->
@@ -71,9 +75,8 @@
 <!-- Calendly badge widget end -->
 
 <!-- FAVICONS -->
-<link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
-<link rel="icon"       type="image/png" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
-<link rel="icon"       type="image/svg+xml"           href="CDUK small logo 50x50.jpg">    <!-- optional modern -->
+<link rel="icon"       type="image/jpeg" sizes="32x32" href="CDUK small logo 50x50.jpg">
+<link rel="icon"       type="image/jpeg" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
 <link rel="apple-touch-icon"             sizes="180x180" href="CDUK small logo 50x50.jpg">
 <meta name="msapplication-TileImage"     content="mstile-150.png">
 <meta name="msapplication-TileColor"     content="#6c181c">
@@ -104,11 +107,10 @@
   <button id="cookie-close" class="cookie-banner__close">&times;</button>
 </div>
 
-  <!-- NAVBAR (global include) -->
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="cduk-logo-80.png" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
@@ -128,7 +130,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
             <li><a class="dropdown-item" href="services.html">All Services</a></li>
-            <li><a class="dropdown-item" href="wesite-design.html">Website Design</a></li>
+            <li><a class="dropdown-item" href="website-design.html">Website Design</a></li>
             <li><a class="dropdown-item" href="ecommerce.html">E-commerce</a></li>
             <li><a class="dropdown-item" href="branding.html">Business Branding</a></li>
             <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
@@ -913,7 +915,8 @@
         Fill in the form below for a free, no-obligation quote.
       </p>
           <button type="submit" class="cta-btn">
-            Get My Free Quote
+            <a href="contact.html">Get My Free Quote</a>
+
           </button>
     </div>
   </div>

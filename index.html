@@ -8,47 +8,55 @@
   <title>Web Design, E-commerce & SEO North Wales | Clean Design UK</title>
   <meta name="description"
         content="Clean Design UK creates lightning-fast websites, conversion-focused e-commerce stores, bold branding and data-driven digital-marketing campaigns for small businesses in Bangor, Anglesey, Caernarfon and across the UK. Free strategy call.">
-  <link rel="canonical" href="https://cleandesignuk.com/">
+  <link rel="canonical" href="https://cleandesignuk.com/index.html">
 
   <!-- ── Open Graph / Twitter ────────────────────────────────────── -->
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="Clean Design UK – North Wales Web Design & Digital Marketing">
   <meta property="og:description" content="Bespoke web design, e-commerce, SEO and branding that help North-Wales businesses grow online. Book your free consultation today.">
-  <meta property="og:url"         content="https://cleandesignuk.com/">
+  <meta property="og:url"         content="https://cleandesignuk.com/index.html">
   <meta property="og:image"       content="https://cleandesignuk.com/">
   <meta name="twitter:card"       content="summary_large_image">
+      <meta property="og:site_name" content="Clean Design UK">
+
 
 
   <!-- ── LocalBusiness Schema ────────────────────────────────────── -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Clean Design UK",
-    "url":"https://cleandesignuk.com/",
-    "description":"North Wales web design, e-commerce, SEO & digital-marketing studio.",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"4 Ffordd Cerrig Mawr",
-      "addressLocality":"Caergeiliog",
-      "addressRegion":"Anglesey",
-      "postalCode":"LL65 3LU",
-      "addressCountry":"GB"
-    },
-    "areaServed":[
-      {"@type":"Place","name":"Bangor"},
-      {"@type":"Place","name":"Anglesey"},
-      {"@type":"Place","name":"Caernarfon"},
-      {"@type":"Place","name":"North Wales"},
-      {"@type":"Place","name":"United Kingdom"}
-    ],
-    "contactPoint":{
-      "@type":"ContactPoint",
-      "telephone":"+44 7367 292269",
-      "contactType":"customer service"
-    }
-  }
-  </script>
+ <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Clean Design UK",
+  "url":"https://cleandesignuk.com/",
+  "image":"https://cleandesignuk.com/assets/logo-og.png",
+  "telephone":"+44 7367 292269",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"4 Ffordd Cerrig Mawr",
+    "addressLocality":"Caergeiliog",
+    "addressRegion":"Anglesey",
+    "postalCode":"LL65 3LU",
+    "addressCountry":"GB"
+  },
+  "areaServed":[{"@type":"Place","name":"Bangor"},{"@type":"Place","name":"Anglesey"},{"@type":"Place","name":"Caernarfon"},{"@type":"Place","name":"North Wales"},{"@type":"Place","name":"United Kingdom"}],
+  "sameAs":[
+    "https://www.facebook.com/CleanDesignUK",
+    "https://www.instagram.com/cleandesign_uk",
+    "https://www.linkedin.com/company/clean-design-uk"
+  ]
+}
+</script>
+
+<!-- Optional: keep a small WebSite node too -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Clean Design UK",
+  "url":"https://cleandesignuk.com/"
+}
+</script>
+
 <!-- 1 ) Pre-connect to Google Fonts domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,9 +118,8 @@
 
   
 <!-- FAVICONS -->
-<link rel="icon"       type="image/png" sizes="32x32" href="CDUK small logo 50x50.jpg">
-<link rel="icon"       type="image/png" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
-<link rel="icon"       type="image/svg+xml"           href="CDUK small logo 50x50.jpg">    <!-- optional modern -->
+<link rel="icon"       type="image/jpeg" sizes="32x32" href="CDUK small logo 50x50.jpg">
+<link rel="icon"       type="image/jpeg" sizes="48x48" href="CDUK small logo 50x50.jpg"> <!-- optional -->
 <link rel="apple-touch-icon"             sizes="180x180" href="CDUK small logo 50x50.jpg">
 <meta name="msapplication-TileImage"     content="mstile-150.png">
 <meta name="msapplication-TileColor"     content="#6c181c">
@@ -131,7 +138,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="CDUK small logo.webp" alt="Logo" class="me-2">
         CleanDesignUK
       </a>
@@ -151,7 +158,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
             <li><a class="dropdown-item" href="services.html">All Services</a></li>
-            <li><a class="dropdown-item" href="wesite-design.html">Website Design</a></li>
+            <li><a class="dropdown-item" href="website-design.html">Website Design</a></li>
             <li><a class="dropdown-item" href="ecommerce.html">E-commerce</a></li>
             <li><a class="dropdown-item" href="branding.html">Business Branding</a></li>
             <li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>
@@ -183,7 +190,7 @@
     <!-- Subtitle with its own spacing -->
     <p class="lead mb-4">
       We craft mobile-first brochure sites, conversion-ready online stores, and ROI-focused digital-marketing campaigns that turn local traffic into loyal customers across Bangor, Anglesey, Caernarfon & the wider UK.
-
+      </p>
     <!-- Form pill with top & bottom margin -->
     <form id="hero-form"
           class="hero-form"
