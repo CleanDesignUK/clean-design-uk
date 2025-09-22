@@ -1,5 +1,5 @@
 # robots.txt for https://cleandesignuk.com
-# Generated on 2025-06-24
+# Generated on 2025-09-22
 
 User-agent: *
 Disallow:
