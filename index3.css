@@ -1,0 +1,2063 @@
+/* =========================================================
+   CLEAN DESIGN UK
+   INDEX3.CSS
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.home-page {
+  background: #ffffff;
+}
+
+
+.home-page main {
+  overflow: clip;
+}
+
+
+/* =========================================================
+   SHARED HOMEPAGE
+========================================================= */
+
+.section-kicker {
+  margin-bottom: .9rem;
+
+  color: var(--cduk-red);
+
+  font-family: var(--font-sub);
+
+  font-size: .76rem;
+
+  font-weight: 900;
+
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+}
+
+
+.section-kicker-light {
+  color: #e7898f;
+}
+
+
+.section-heading-row {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    .9fr;
+
+  align-items: end;
+
+  gap:
+    clamp(
+      2rem,
+      5vw,
+      5rem
+    );
+
+  margin-bottom: 2.6rem;
+}
+
+
+.section-heading-row h2,
+.home-location h2,
+.home-faq h2 {
+  font-size:
+    clamp(
+      2.25rem,
+      4.8vw,
+      4.8rem
+    );
+
+  font-weight: 800;
+
+  line-height: .98;
+
+  letter-spacing: -.055em;
+}
+
+
+.section-heading-row > p,
+.location-content > p,
+.faq-intro {
+  color: var(--cduk-grey);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+  position: relative;
+
+  /*
+   * Gives us enough scroll distance for the fan animation.
+   * The visitor initially sees one complete 100svh design.
+   */
+  height: 148svh;
+
+  background: #080a0a;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   STICKY HERO VIEW
+========================================================= */
+
+.hero-sticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100svh;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background: #080a0a;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.hero-grid-lines {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -5;
+
+  opacity: .15;
+
+  pointer-events: none;
+
+  background-image:
+
+    linear-gradient(
+      rgba(
+        255,
+        255,
+        255,
+        .09
+      )
+      1px,
+      transparent
+      1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(
+        255,
+        255,
+        255,
+        .09
+      )
+      1px,
+      transparent
+      1px
+    );
+
+  background-size:
+    160px
+    160px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 88%,
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.hero-glow {
+  position: absolute;
+
+  z-index: -4;
+
+  width: 500px;
+
+  height: 280px;
+
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  filter: blur(95px);
+
+  pointer-events: none;
+}
+
+
+.hero-glow-left {
+  left: -180px;
+
+  background:
+    rgba(
+      186,
+      13,
+      23,
+      .42
+    );
+}
+
+
+.hero-glow-right {
+  right: -180px;
+
+  background:
+    rgba(
+      108,
+      24,
+      28,
+      .37
+    );
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+
+   More breathing space below the floating navbar.
+========================================================= */
+
+.hero-container {
+  height: 100%;
+
+  padding-top:
+    clamp(
+      128px,
+      15vh,
+      150px
+    );
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.hero-copy {
+  position: relative;
+
+  z-index: 30;
+
+  width:
+    min(
+      950px,
+      100%
+    );
+
+  margin:
+    0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.hero-kicker {
+  margin-bottom: .65rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .44
+    );
+
+  font-family: var(--font-sub);
+
+  font-size: .66rem;
+
+  font-weight: 900;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO H1
+========================================================= */
+
+.hero-copy h1 {
+  max-width: 1000px;
+
+  margin-inline: auto;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      2.9rem,
+      5vw,
+      5.45rem
+    );
+
+  font-weight: 800;
+
+  line-height: .92;
+
+  letter-spacing: -.065em;
+
+  text-wrap: balance;
+}
+
+
+.hero-copy h1 span {
+  display: block;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .94
+    );
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width:
+    min(
+      720px,
+      94%
+    );
+
+  margin:
+    .8rem
+    auto
+    0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .58
+    );
+
+  font-size:
+    clamp(
+      .9rem,
+      1.15vw,
+      1.02rem
+    );
+
+  line-height: 1.55;
+
+  text-wrap: balance;
+}
+
+
+/* =========================================================
+   HERO FORM
+========================================================= */
+
+.hero-form {
+  position: relative;
+
+  z-index: 50;
+
+  width:
+    min(
+      1150px,
+      100%
+    );
+
+  margin:
+    1rem
+    auto
+    0;
+
+  padding: .55rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .11
+    );
+
+  border-radius: 16px;
+
+  background:
+    rgba(
+      18,
+      21,
+      21,
+      .92
+    );
+
+  box-shadow:
+    0
+    20px
+    48px
+    rgba(
+      0,
+      0,
+      0,
+      .25
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.hero-form-fields {
+  display: grid;
+
+  grid-template-columns:
+    .95fr
+    .9fr
+    1.15fr
+    1.08fr
+    auto;
+
+  gap: .5rem;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.hero-field {
+  min-width: 0;
+}
+
+
+.hero-field input,
+.hero-field select {
+  width: 100%;
+
+  height: 50px;
+
+  padding:
+    0
+    .82rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .10
+    );
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .065
+    );
+
+  color: #fff;
+
+  font-family: var(--font-body);
+
+  font-size: .81rem;
+
+  transition:
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+
+.hero-field input::placeholder {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .36
+    );
+}
+
+
+.hero-field input:focus,
+.hero-field select:focus {
+  border-color:
+    rgba(
+      215,
+      67,
+      77,
+      .82
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .09
+    );
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      186,
+      13,
+      23,
+      .11
+    );
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.hero-select-wrap {
+  position: relative;
+}
+
+
+.hero-select-wrap::after {
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+
+  right: 17px;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-right:
+    1.5px solid
+    rgba(
+      255,
+      255,
+      255,
+      .55
+    );
+
+  border-bottom:
+    1.5px solid
+    rgba(
+      255,
+      255,
+      255,
+      .55
+    );
+
+  transform:
+    translateY(-70%)
+    rotate(45deg);
+
+  pointer-events: none;
+}
+
+
+.hero-field select {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  padding-right: 2.35rem;
+
+  cursor: pointer;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .78
+    );
+}
+
+
+.hero-field select:invalid {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .37
+    );
+}
+
+
+.hero-field select option {
+  background: #181b1b;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   HERO SUBMIT
+========================================================= */
+
+.hero-submit {
+  min-width: 154px;
+
+  height: 50px;
+
+  padding:
+    0
+    1.05rem;
+
+  border: 0;
+
+  border-radius: 11px;
+
+  background:
+    var(--cduk-red);
+
+  color: #fff;
+
+  font-family: var(--font-sub);
+
+  font-size: .79rem;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+
+.hero-submit:hover {
+  background: #d31520;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.hero-submit:disabled {
+  opacity: .6;
+
+  cursor: wait;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   HONEYPOTS
+========================================================= */
+
+.form-honeypot,
+.form-trap {
+  position: absolute !important;
+
+  width: 1px !important;
+
+  height: 1px !important;
+
+  padding: 0 !important;
+
+  margin: -1px !important;
+
+  overflow: hidden !important;
+
+  clip:
+    rect(
+      0,
+      0,
+      0,
+      0
+    ) !important;
+
+  white-space: nowrap !important;
+
+  border: 0 !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
+}
+
+
+/* =========================================================
+   PORTFOLIO AREA
+
+   KEY CHANGE:
+   Cards use the remaining viewport height instead of a
+   large fixed width, so the whole project is visible.
+========================================================= */
+
+.hero-portfolio-wrap {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  margin-top: .65rem;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.hero-portfolio-stage {
+  position: absolute;
+
+  inset:
+    0
+    0
+    8px;
+
+  perspective: 1500px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARDS
+
+   Width is based heavily on viewport HEIGHT.
+
+   This fixes the problem shown in your screenshot where
+   only the top half of the websites was visible.
+========================================================= */
+
+.portfolio-fan-card {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 0;
+
+  /*
+   * On a normal desktop this comes out around 240–275px,
+   * leaving the whole square visible.
+   */
+  width:
+    clamp(
+      205px,
+      29vh,
+      285px
+    );
+
+  aspect-ratio:
+    1 / 1;
+
+  transform-origin:
+    center bottom;
+
+  will-change: transform;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   CARD INNER
+========================================================= */
+
+.portfolio-fan-inner {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .16
+    );
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0
+    28px
+    65px
+    rgba(
+      0,
+      0,
+      0,
+      .4
+    );
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease;
+}
+
+
+/* =========================================================
+   ONLY HOVER MOVES AUTOMATICALLY
+========================================================= */
+
+.portfolio-fan-card:hover
+.portfolio-fan-inner {
+  transform:
+    translateY(-9px)
+    scale(1.018);
+
+  box-shadow:
+    0
+    38px
+    85px
+    rgba(
+      0,
+      0,
+      0,
+      .52
+    );
+}
+
+
+/* =========================================================
+   CENTRE CARD
+========================================================= */
+
+.portfolio-card-main
+.portfolio-fan-inner {
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      .33
+    );
+
+  box-shadow:
+    0
+    34px
+    78px
+    rgba(
+      0,
+      0,
+      0,
+      .47
+    );
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.portfolio-fan-inner img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   PROJECT LABEL
+   Hidden until hover.
+========================================================= */
+
+.portfolio-fan-info {
+  position: absolute;
+
+  left: 11px;
+
+  right: 11px;
+
+  bottom: 11px;
+
+  padding:
+    .58rem
+    .68rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .10
+    );
+
+  border-radius: 11px;
+
+  background:
+    rgba(
+      7,
+      9,
+      9,
+      .83
+    );
+
+  color: #fff;
+
+  backdrop-filter:
+    blur(13px);
+
+  -webkit-backdrop-filter:
+    blur(13px);
+
+  opacity: 0;
+
+  transform:
+    translateY(6px);
+
+  transition:
+    opacity .18s ease,
+    transform .18s ease;
+}
+
+
+.portfolio-fan-card:hover
+.portfolio-fan-info {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+.portfolio-fan-info strong {
+  display: block;
+
+  font-family: var(--font-title);
+
+  font-size: .71rem;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+
+.portfolio-fan-info span {
+  display: block;
+
+  margin-top: .12rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .53
+    );
+
+  font-size: .58rem;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.home-services {
+  background: #fff;
+}
+
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap: 1rem;
+}
+
+
+.service-card {
+  min-height: 330px;
+
+  padding: 1.6rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid
+    var(--cduk-line);
+
+  border-radius: 26px;
+
+  background:
+    var(--cduk-cream);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+
+.service-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(
+      186,
+      13,
+      23,
+      .2
+    );
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+
+.service-number {
+  color:
+    var(--cduk-red);
+
+  font-family: var(--font-sub);
+
+  font-size: .72rem;
+
+  font-weight: 900;
+}
+
+
+.service-card h3 {
+  margin-top: auto;
+
+  font-size:
+    clamp(
+      1.8rem,
+      2.7vw,
+      2.7rem
+    );
+
+  line-height: 1;
+
+  letter-spacing: -.045em;
+}
+
+
+.service-card p {
+  margin:
+    .8rem
+    0
+    1.2rem;
+
+  color:
+    var(--cduk-grey);
+
+  font-size: .91rem;
+
+  line-height: 1.65;
+}
+
+
+.service-card a {
+  color:
+    var(--cduk-ink);
+
+  font-size: .82rem;
+
+  font-weight: 800;
+
+  text-decoration: underline;
+
+  text-underline-offset: .2rem;
+}
+
+
+.service-card a:hover {
+  color:
+    var(--cduk-red);
+}
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.home-projects {
+  background: #0e1111;
+
+  color: #fff;
+}
+
+
+.home-projects h2 {
+  max-width: 850px;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      2.4rem,
+      5vw,
+      5.1rem
+    );
+
+  line-height: .96;
+
+  letter-spacing: -.06em;
+}
+
+
+.projects-intro {
+  max-width: 680px;
+
+  margin-top: 1rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .55
+    );
+
+  line-height: 1.7;
+}
+
+
+.project-grid {
+  margin-top: 2.4rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      12,
+      1fr
+    );
+
+  gap: 1rem;
+}
+
+
+.project-card {
+  position: relative;
+
+  grid-column:
+    span 4;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .08
+    );
+
+  border-radius: 26px;
+
+  background: #1a1d1d;
+}
+
+
+.project-card-large {
+  grid-column:
+    span 8;
+}
+
+
+.project-card img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .5s ease;
+}
+
+
+.project-card::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(
+        3,
+        4,
+        4,
+        .9
+      ),
+      transparent 58%
+    );
+}
+
+
+.project-card:hover img {
+  transform:
+    scale(1.03);
+}
+
+
+.project-copy {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 1.2rem;
+
+  right: 1.2rem;
+
+  bottom: 1rem;
+
+  color: #fff;
+}
+
+
+.project-copy strong {
+  display: block;
+
+  font-family:
+    var(--font-title);
+
+  font-size: 1.15rem;
+}
+
+
+.project-copy span {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .54
+    );
+
+  font-size: .72rem;
+}
+
+
+.projects-action {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.home-location {
+  background: #fff;
+}
+
+
+.location-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  align-items: center;
+
+  gap:
+    clamp(
+      2rem,
+      6vw,
+      6rem
+    );
+}
+
+
+.location-visual {
+  min-height: 520px;
+
+  padding:
+    clamp(
+      1.6rem,
+      3vw,
+      3rem
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-radius: 30px;
+
+  background:
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(
+        186,
+        13,
+        23,
+        .34
+      ),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 14% 86%,
+      rgba(
+        108,
+        24,
+        28,
+        .3
+      ),
+      transparent 26%
+    ),
+
+    #111414;
+
+  color: #fff;
+}
+
+
+.location-visual h2 {
+  max-width: 620px;
+
+  color: #fff;
+}
+
+
+.location-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .55rem;
+}
+
+
+.location-tags span {
+  padding:
+    .52rem
+    .7rem;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .12
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .07
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .8
+    );
+
+  font-size: .72rem;
+
+  font-weight: 700;
+}
+
+
+.location-content
+p + p {
+  margin-top: 1rem;
+}
+
+
+.location-content
+.text-link {
+  margin-top: 1.4rem;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.home-faq {
+  background:
+    var(--cduk-cream);
+}
+
+
+.faq-grid {
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  align-items: start;
+
+  gap:
+    clamp(
+      2rem,
+      6vw,
+      6rem
+    );
+}
+
+
+.faq-intro {
+  max-width: 500px;
+
+  margin-top: 1rem;
+}
+
+
+.faq-list {
+  border-top:
+    1px solid
+    var(--cduk-line);
+}
+
+
+.faq-list details {
+  border-bottom:
+    1px solid
+    var(--cduk-line);
+}
+
+
+.faq-list summary {
+  position: relative;
+
+  list-style: none;
+
+  cursor: pointer;
+
+  padding:
+    1.25rem
+    2.5rem
+    1.25rem
+    0;
+
+  color:
+    var(--cduk-ink);
+
+  font-family: var(--font-title);
+
+  font-size: 1rem;
+
+  font-weight: 800;
+}
+
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+
+.faq-list summary::after {
+  content: '+';
+
+  position: absolute;
+
+  right: .15rem;
+
+  top: 1rem;
+
+  color:
+    var(--cduk-red);
+
+  font-size: 1.7rem;
+
+  font-weight: 400;
+}
+
+
+.faq-list
+details[open]
+summary::after {
+  content: '–';
+}
+
+
+.faq-list details p {
+  padding:
+    0
+    2.5rem
+    1.3rem
+    0;
+
+  color:
+    var(--cduk-grey);
+
+  font-size: .92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.home-final-cta {
+  padding:
+    0
+    0
+    clamp(
+      4rem,
+      8vw,
+      8rem
+    );
+
+  background:
+    var(--cduk-cream);
+}
+
+
+.final-cta-card {
+  padding:
+    clamp(
+      2rem,
+      5vw,
+      5rem
+    );
+
+  border-radius: 30px;
+
+  background: #101313;
+
+  color: #fff;
+
+  text-align: center;
+}
+
+
+.final-cta-card h2 {
+  max-width: 900px;
+
+  margin-inline: auto;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      2.4rem,
+      5vw,
+      5rem
+    );
+
+  line-height: .96;
+
+  letter-spacing: -.06em;
+}
+
+
+.final-cta-card
+> p:not(.section-kicker) {
+  max-width: 600px;
+
+  margin:
+    1rem
+    auto
+    1.5rem;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .58
+    );
+}
+
+
+/* =========================================================
+   MID-HEIGHT DESKTOP
+========================================================= */
+
+@media
+(min-width: 1000px)
+and
+(max-height: 900px) {
+
+  .hero-container {
+    padding-top: 112px;
+  }
+
+
+  .hero-copy h1 {
+    font-size:
+      clamp(
+        2.65rem,
+        4.65vw,
+        4.75rem
+      );
+  }
+
+
+  .hero-description {
+    margin-top: .6rem;
+
+    font-size: .88rem;
+  }
+
+
+  .hero-form {
+    margin-top: .7rem;
+  }
+
+
+  .hero-portfolio-wrap {
+    margin-top: .4rem;
+  }
+
+
+  .portfolio-fan-card {
+    width:
+      clamp(
+        195px,
+        26vh,
+        245px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   VERY SHORT DESKTOP
+========================================================= */
+
+@media
+(min-width: 1000px)
+and
+(max-height: 760px) {
+
+  .hero-container {
+    padding-top: 92px;
+  }
+
+
+  .hero-kicker {
+    margin-bottom: .42rem;
+  }
+
+
+  .hero-copy h1 {
+    font-size:
+      clamp(
+        2.4rem,
+        4.2vw,
+        4.2rem
+      );
+  }
+
+
+  .hero-description {
+    margin-top: .45rem;
+
+    font-size: .82rem;
+  }
+
+
+  .hero-form {
+    margin-top: .55rem;
+  }
+
+
+  .hero-field input,
+  .hero-field select,
+  .hero-submit {
+    height: 45px;
+  }
+
+
+  .portfolio-fan-card {
+    width:
+      clamp(
+        170px,
+        24vh,
+        205px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   FORM BREAKPOINT
+========================================================= */
+
+@media
+(max-width: 1180px) {
+
+  .hero-form-fields {
+    grid-template-columns:
+      1fr
+      1fr
+      1fr
+      1fr;
+  }
+
+
+  .hero-submit {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media
+(max-width: 899px) {
+
+  .home-hero {
+    height: auto;
+
+    min-height: 100svh;
+  }
+
+
+  .hero-sticky {
+    position: relative;
+
+    height: auto;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+  }
+
+
+  .hero-container {
+    min-height: 100svh;
+
+    padding-top: 104px;
+
+    padding-bottom: 1.5rem;
+  }
+
+
+  .hero-copy h1 {
+    font-size:
+      clamp(
+        2.8rem,
+        10vw,
+        5.3rem
+      );
+  }
+
+
+  .hero-form-fields {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .hero-submit {
+    grid-column: auto;
+
+    width: auto;
+  }
+
+
+  /* PORTFOLIO BECOMES SWIPEABLE */
+
+  .hero-portfolio-wrap {
+    flex: none;
+
+    min-height: auto;
+
+    margin-top: 1.4rem;
+  }
+
+
+  .hero-portfolio-stage {
+    position: relative;
+
+    inset: auto;
+
+    display: flex;
+
+    gap: .8rem;
+
+    overflow-x: auto;
+
+    scroll-snap-type:
+      x mandatory;
+
+    scrollbar-width: none;
+
+    padding:
+      .25rem
+      .1rem
+      1.25rem;
+
+    pointer-events: auto;
+  }
+
+
+  .hero-portfolio-stage::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .portfolio-fan-card {
+    position: relative;
+
+    left: auto;
+
+    bottom: auto;
+
+    width:
+      min(
+        68vw,
+        325px
+      );
+
+    min-width:
+      min(
+        68vw,
+        325px
+      );
+
+    transform:
+      none !important;
+
+    flex:
+      0 0 auto;
+
+    scroll-snap-align:
+      center;
+  }
+
+
+  .portfolio-fan-info {
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .section-heading-row,
+  .location-grid,
+  .faq-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .project-card,
+  .project-card-large {
+    grid-column:
+      span 6;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media
+(max-width: 650px) {
+
+  .section-pad {
+    padding:
+      4.5rem
+      0;
+  }
+
+
+  .hero-container {
+    padding-top: 96px;
+  }
+
+
+  .hero-kicker {
+    font-size: .58rem;
+  }
+
+
+  .hero-copy h1 {
+    font-size:
+      clamp(
+        2.4rem,
+        12.3vw,
+        4.2rem
+      );
+
+    line-height: .94;
+  }
+
+
+  .hero-description {
+    width: 96%;
+
+    font-size: .87rem;
+  }
+
+
+  .hero-form {
+    border-radius: 16px;
+
+    padding: .55rem;
+  }
+
+
+  .hero-form-fields {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .hero-submit {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+
+  .portfolio-fan-card {
+    width: 78vw;
+
+    min-width: 78vw;
+  }
+
+
+  .service-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .service-card {
+    min-height: 280px;
+  }
+
+
+  .project-card,
+  .project-card-large {
+    grid-column:
+      span 12;
+  }
+
+
+  .location-visual {
+    min-height: 410px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media
+(prefers-reduced-motion: reduce) {
+
+  .portfolio-fan-card {
+    transform:
+      translateX(-50%) !important;
+  }
+
+}
